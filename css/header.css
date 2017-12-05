@@ -1,0 +1,9 @@
+header {
+    background-image: url("../images/headerImg.jpg");
+    height: 725px;
+}
+
+.my-nav{
+    background-color: rgba(235, 235, 235, .0);
+}
+
