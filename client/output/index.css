@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "BigJohn";
+  src: url(./fonts/BIG-JOHN.otf) format("otf"); }
+
+header {
+  background-image: url(./images/headerImg.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 725px; }
+
+.my-nav {
+  background-color: rgba(235, 235, 235, 0); }
+
+.my-brand {
+  font-family: "BigJohn", sans-serif;
+  font-size: 1.8rem; }
+
+.my-navbar {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter; }
+
+.navbar-nav li.nav-item .nav-link {
+  color: white;
+  padding: 0.4rem 1rem;
+  margin: 0.1rem; }
+
+.navbar-nav li.nav-item .nav-link:hover {
+  box-shadow: 0 0 0 1px white;
+  border-radius: .5rem; }
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  box-shadow: 0 0 0 1px white;
+  border-radius: .5rem; }
+
+.ul-navbar {
+  display: flex;
+  justify-content: center;
+  border-radius: .5rem;
+  background: rgba(64, 63, 53, 0.2); }
+
+.navbar-dark .navbar-toggler {
+  border-color: white;
+  cursor: pointer; }
+
+.container .myh1 {
+  margin-top: 18%;
+  text-align: center; }
+
+@media screen and (max-width: 1024px) {
+  .container .myh1 {
+    margin-top: 22%; } }
+
+@media screen and (max-width: 768px) {
+  header {
+    background-image: url(./images/headerImgmin.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 455px; }
+  .container .myh1 {
+    margin-top: 13%; } }
+
+@media screen and (max-width: 425px) {
+  .container .myh1 {
+    margin-top: 20%; } }
