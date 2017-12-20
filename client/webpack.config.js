@@ -1,8 +1,9 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
-  context: path.resolve(__dirname, "./src"),
+  context: path.resolve(__dirname, 'src'),
   entry: "./js/index.js",
   output: {
     path: path.resolve(__dirname, "./output"),
@@ -26,7 +27,16 @@ module.exports = {
         use: ExtractTextPlugin.extract(
           {
             fallback: "style-loader",
-            use: ["css-loader", "sass-loader"]
+            use: ["css-loader",
+              {
+                loader: "postcss-loader",
+                options: {
+                  plugins: () => {
+                    return [autoprefixer]
+                  }
+                }
+              }, "sass-loader"
+            ]
           }
         )
       },
