@@ -1,0 +1,36 @@
+.menu {
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+  .logo {
+    font-family: $logo-font;
+    color: $white-font-color;
+    padding-top: 2%;
+    font-size: 1.7rem;
+  }
+  nav {
+    ul {
+      float: right;
+      @include ul(none, 0, 0, 1.5rem);
+      li {
+        float: left;
+        &:nth-child(-n+7) {
+          margin-right: 0.8rem;
+        }
+        a {
+          padding: 0.4rem 1.1rem;
+          &:last-child {
+            margin-right: -0.7rem;
+          }
+          @include links(inline-block, none, $white-font-color, 1rem, $main-font, 300);
+          &:hover {
+            border-radius: $border-radius;
+            box-shadow: $white-box-shadow;
+          }
+          &:focus {
+            @extend :hover;
+          }
+        }
+      }
+    }
+  }
+}

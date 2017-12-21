@@ -35,7 +35,7 @@ module.exports = {
                     return [autoprefixer]
                   }
                 }
-              }, "sass-loader"
+              }, "resolve-url-loader", "sass-loader?sourceMap"
             ]
           }
         )

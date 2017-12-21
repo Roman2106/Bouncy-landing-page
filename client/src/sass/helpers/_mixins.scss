@@ -1,0 +1,35 @@
+@mixin background-img($url, $size: null, $position: null, $repeat: null, $clip: null) {
+  background-image: url($url);
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+  background-clip: $clip;
+}
+
+@mixin ul($list-style, $margin:null, $padding:null, $line-height:null) {
+  list-style-type: $list-style;
+  margin: $margin;
+  padding: $padding;
+  line-height: $line-height;
+}
+
+@mixin links($display:null, $decoration:null, $color:null, $font-size: null, $family:null, $font-weight: null) {
+  display: $display;
+  text-decoration: $decoration;
+  font-size: $font-size;
+  font-family: $family;
+  font-weight: $font-weight;
+  &:visited {
+    color: $color;
+  }
+}
+
+@mixin all-h($family:null, $line-height: null, $letter-spacing: null, $color:null, $font-size: null, $font-weight: null, $text-transform: null) {
+  font-family: $family;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+}
