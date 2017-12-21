@@ -33,3 +33,52 @@
   font-weight: $font-weight;
   text-transform: $text-transform;
 }
+
+@mixin mq-xs {
+  @media(min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+    @content;
+  }
+}
+
+@mixin mq-sm {
+  @media(min-width: $screen-sm) and (max-width: $screen-md - 1) {
+    @content;
+  }
+}
+
+@mixin mq-sm-and-up {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+    @content;
+  }
+}
+
+@mixin mq-md-and-up {
+  @media(min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media(min-width: $screen-lg) and (max-width: $screen-xl - 1) {
+    @content;
+  }
+}
+
+@mixin mq-lg-and-up {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin mq-xl-and-up {
+  @media(min-width: $screen-xl) {
+    @content;
+  }
+}
+

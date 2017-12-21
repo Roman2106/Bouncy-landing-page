@@ -496,6 +496,7 @@ header {
   min-height: 92vh;
   padding: 3% 7%;
   display: grid;
+  position: relative;
   grid-template-columns: auto;
   grid-template-rows: 38px 1fr;
   background-image: url(./images/headerImg.jpg);
@@ -512,6 +513,7 @@ header .content {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  z-index: 1;
 }
 
 header .content h1 {
@@ -561,9 +563,20 @@ header .content .header-button .menu nav ul li a:focus,
   opacity: 0.8;
 }
 
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(20, 20, 20, 0.3);
+}
+
 .menu {
   display: grid;
   grid-template-columns: 3fr 10fr;
+  z-index: 1;
 }
 
 .menu .logo {

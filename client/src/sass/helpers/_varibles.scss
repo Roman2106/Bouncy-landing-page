@@ -10,7 +10,7 @@ $teal-font-color: #00BD9A;
 
 $company-color: #00BD99;
 $transparent-company-color: rgba(106, 188, 154, .5);
-$dark-overlay-color: rgba(20, 20, 20, .5);
+$dark-overlay-color: rgba(20, 20, 20, .3);
 
 $border-radius: 1.1rem;
 
@@ -18,3 +18,9 @@ $white-box-shadow: 0 0 0 1px $white-font-color;
 
 $grey-bg: #F2F3F2;
 $white-bg: #FEFFFE;
+
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 960px;
+$screen-xl: 1360px;
