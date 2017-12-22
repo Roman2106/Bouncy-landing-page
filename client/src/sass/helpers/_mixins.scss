@@ -34,44 +34,44 @@
   text-transform: $text-transform;
 }
 
-@mixin mq-xs {
-  @media(min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+@mixin mq-sm-and-down {
+  @media(max-width: $screen-sm) {
     @content;
   }
 }
 
 @mixin mq-sm {
-  @media(min-width: $screen-sm) and (max-width: $screen-md - 1) {
+  @media(max-width: $screen-md) and (min-width: $screen-sm - 1) {
     @content;
   }
 }
 
-@mixin mq-sm-and-up {
-  @media (min-width: $screen-sm) {
+@mixin mq-md-and-down {
+  @media(max-width: $screen-md) {
     @content;
   }
 }
 
 @mixin mq-md {
-  @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+  @media(max-width: $screen-lg) and (min-width: $screen-md - 1) {
     @content;
   }
 }
 
-@mixin mq-md-and-up {
-  @media(min-width: $screen-md) {
+@mixin mq-lg-and-down {
+  @media(max-width: $screen-lg) {
     @content;
   }
 }
 
 @mixin mq-lg {
-  @media(min-width: $screen-lg) and (max-width: $screen-xl - 1) {
+  @media(max-width: $screen-xl) and (min-width: $screen-lg - 1) {
     @content;
   }
 }
 
-@mixin mq-lg-and-up {
-  @media (min-width: $screen-lg) {
+@mixin mq-xl-and-down {
+  @media(max-width: $screen-xl) {
     @content;
   }
 }
@@ -81,4 +81,6 @@
     @content;
   }
 }
+
+
 

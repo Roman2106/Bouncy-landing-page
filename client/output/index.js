@@ -63,23 +63,30 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _test = __webpack_require__(1);
+var _menu = __webpack_require__(10);
 
 __webpack_require__(2);
 
-var a = 5;
+var thisBouncy = document.getElementsByClassName("this-bouncy")[0];
+var menu = document.getElementsByClassName("menu")[0];
 
-(0, _test.testFunc)(5);
+window.onscroll = function () {
+  var scroll = document.documentElement.scrollTop;
+  var sfScroll = document.body.scrollTop;
+  (0, _menu.menuScroll)(scroll, sfScroll, thisBouncy, menu);
+};
 
 /***/ }),
-/* 1 */
+
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88,16 +95,25 @@ var a = 5;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var testFunc = exports.testFunc = function testFunc(a) {
-  var b = 2;
-  console.log(a + b);
+var menuScroll = exports.menuScroll = function menuScroll(scroll, sfScroll, thisBouncy, menu) {
+  var offsetBouncy = thisBouncy.offsetTop;
+  if (scroll > offsetBouncy || sfScroll > offsetBouncy) {
+    menu.classList.remove("menu-height");
+    menu.classList.add("menu-height");
+    menu.classList.add("fixed-menu");
+  } else {
+    menu.classList.add("menu-height");
+    menu.classList.remove("fixed-menu");
+  }
 };
 
 /***/ }),
-/* 2 */
+
+/***/ 2:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-/******/ ]);
+
+/******/ });

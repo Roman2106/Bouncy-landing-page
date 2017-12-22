@@ -497,8 +497,8 @@ header {
   padding: 3% 7%;
   display: grid;
   position: relative;
-  grid-template-columns: auto;
-  grid-template-rows: 38px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   background-image: url(./images/headerImg.jpg);
   background-size: cover;
   background-position: center;
@@ -531,6 +531,12 @@ header .content h1 {
   text-transform: uppercase;
 }
 
+@media (max-width: 576px) {
+  header .content h1 {
+    line-height: 2.5rem;
+  }
+}
+
 header .content p {
   font-family: "Open Sans", sans-serif;
   color: #F4F5F3;
@@ -538,29 +544,6 @@ header .content p {
   letter-spacing: .1rem;
   word-spacing: .3rem;
   line-height: 1.8rem;
-}
-
-header .content .header-button {
-  margin-top: 6rem;
-}
-
-header .content .header-button a {
-  width: 38px;
-  height: 38px;
-  display: inline-block;
-  border-radius: 52px;
-  -webkit-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-  background-image: url(./images/anchor.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-header .content .header-button a:hover,
-header .content .header-button .menu nav ul li a:focus,
-.menu nav ul li header .content .header-button a:focus {
-  opacity: 0.8;
 }
 
 header:before {
@@ -574,20 +557,33 @@ header:before {
 }
 
 .menu {
-  display: grid;
-  grid-template-columns: 3fr 10fr;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 74px;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
 }
 
 .menu .logo {
   font-family: "BigJohn", Big John;
   color: #F4F5F3;
-  padding-top: 2%;
+  padding-top: 2.8rem;
+  margin-left: 7%;
   font-size: 1.7rem;
+  float: left;
+}
+
+.menu nav {
+  float: right;
+  margin-right: 7%;
+  padding-top: 2.4rem;
 }
 
 .menu nav ul {
-  float: right;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -599,11 +595,31 @@ header:before {
 }
 
 .menu nav ul li:nth-child(-n+7) {
-  margin-right: 0.8rem;
+  margin-right: 0.7rem;
 }
 
-.menu nav ul li a {
-  padding: 0.4rem 1.1rem;
+@media (max-width: 960px) {
+  .menu nav ul li:nth-child(-n+7) {
+    margin-right: 0.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu nav ul li:not(:last-child) {
+    width: 100%;
+    margin-top: 1rem;
+    display: none;
+  }
+
+  .menu nav ul li:last-child {
+    float: right;
+    display: inline-block;
+  }
+}
+
+.menu nav ul li a:not(.icon) {
+  margin-right: -0.6rem;
+  padding: 0.4rem 0.9rem;
   display: inline-block;
   text-decoration: none;
   font-size: 1rem;
@@ -611,19 +627,86 @@ header:before {
   font-weight: 300;
 }
 
-.menu nav ul li a:last-child {
-  margin-right: -0.7rem;
-}
-
-.menu nav ul li a:visited {
+.menu nav ul li a:not(.icon):visited {
   color: #F4F5F3;
 }
 
-.menu nav ul li a:hover,
-.menu nav ul li a:focus {
+.menu nav ul li a:not(.icon):hover,
+.menu nav ul li a:not(.icon):focus {
   border-radius: 1.1rem;
   -webkit-box-shadow: 0 0 0 1px #F4F5F3;
           box-shadow: 0 0 0 1px #F4F5F3;
+}
+
+@media (max-width: 960px) {
+  .menu nav ul li a:not(.icon) {
+    margin-right: -0.2rem;
+    padding: 0.3rem 0.4rem;
+  }
+}
+
+.menu nav ul li .icon {
+  margin-top: -0.4rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 2px solid #F4F5F3;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 35px;
+  display: none;
+}
+
+.menu nav ul li .icon:visited {
+  color: #F4F5F3;
+}
+
+@media (max-width: 576px) {
+  .menu nav ul li .icon {
+    margin-top: 0;
+  }
+}
+
+.menu-height {
+  height: 0;
+}
+
+.fixed-menu {
+  height: 74px;
+  position: fixed;
+  background-color: rgba(44, 44, 39, 0.9);
+  max-width: 1360px;
+  top: 0;
+}
+
+.fixed-menu .logo {
+  padding-top: 1.6rem;
+}
+
+.fixed-menu nav {
+  padding-top: 1.3rem;
+}
+
+.header-button {
+  margin-top: 6rem;
+}
+
+.header-button a {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  border-radius: 52px;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  background-image: url(./images/anchor.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-button a:hover,
+.header-button .menu nav ul li a:not(.icon):focus,
+.menu nav ul li .header-button a:not(.icon):focus {
+  opacity: 0.8;
 }
 
 @font-face {
