@@ -63,30 +63,36 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _menu = __webpack_require__(10);
+var _menu = __webpack_require__(1);
 
 __webpack_require__(2);
 
-var thisBouncy = document.getElementsByClassName("this-bouncy")[0];
-var menu = document.getElementsByClassName("menu")[0];
+var bouncy = document.getElementsByClassName("this-bouncy")[0];
+var navBar = document.getElementsByClassName("nav-bar")[0];
+var navButton = document.getElementsByClassName("nav-btn")[0];
+var menu = document.getElementsByClassName("top-nav")[0];
+var headerButtonToTop = document.getElementsByClassName("header-button-to-top")[0];
 
 window.onscroll = function () {
   var scroll = document.documentElement.scrollTop;
   var sfScroll = document.body.scrollTop;
-  (0, _menu.menuScroll)(scroll, sfScroll, thisBouncy, menu);
+  (0, _menu.menuScroll)(scroll, sfScroll, bouncy, menu, headerButtonToTop);
+};
+
+navButton.onclick = function (e) {
+  e.preventDefault();
+  (0, _menu.menuShow)(navBar);
 };
 
 /***/ }),
-
-/***/ 10:
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95,25 +101,35 @@ window.onscroll = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var menuScroll = exports.menuScroll = function menuScroll(scroll, sfScroll, thisBouncy, menu) {
-  var offsetBouncy = thisBouncy.offsetTop;
+var menuScroll = exports.menuScroll = function menuScroll(scroll, sfScroll, bouncy, menu, headerButtonToTop) {
+  var offsetBouncy = bouncy.offsetTop;
   if (scroll > offsetBouncy || sfScroll > offsetBouncy) {
-    menu.classList.remove("menu-height");
-    menu.classList.add("menu-height");
     menu.classList.add("fixed-menu");
+    menu.style.height = "72px";
+    headerButtonToTop.setAttribute("class", "anchor-to-top");
+    headerButtonToTop.style.display = "block";
+  } else if (scroll + 50 > offsetBouncy || sfScroll + 50 > offsetBouncy) {
+    menu.style.height = "0px";
   } else {
-    menu.classList.add("menu-height");
     menu.classList.remove("fixed-menu");
+    headerButtonToTop.classList.remove("anchor-to-top");
+    headerButtonToTop.style.display = "none";
+  }
+};
+
+var menuShow = exports.menuShow = function menuShow(navBar) {
+  if (navBar.style.top === "0px") {
+    navBar.style.top = "-400vh";
+  } else {
+    navBar.style.top = 0;
   }
 };
 
 /***/ }),
-
-/***/ 2:
+/* 2 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-
-/******/ });
+/******/ ]);

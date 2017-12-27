@@ -6,9 +6,10 @@
   background-clip: $clip;
 }
 
-@mixin ul($list-style, $margin:null, $padding:null, $line-height:null) {
+@mixin ul($list-style, $margin:null, $margin-right:null, $padding:null, $line-height:null) {
   list-style-type: $list-style;
   margin: $margin;
+  margin-right: $margin-right;
   padding: $padding;
   line-height: $line-height;
 }
@@ -78,6 +79,12 @@
 
 @mixin mq-xl-and-up {
   @media(min-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin landscape-orientation {
+  @media (orientation: landscape) and (max-width: $screen-md) {
     @content;
   }
 }

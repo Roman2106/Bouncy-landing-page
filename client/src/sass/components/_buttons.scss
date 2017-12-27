@@ -12,3 +12,46 @@
     }
   }
 }
+
+.nav-btn {
+  position: absolute;
+  right: 0;
+  align-self: flex-start;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 2px solid $white-font-color;
+  background: transparent;
+  outline: none;
+  display: none;
+  margin-right: 7%;
+  &:hover {
+    cursor: pointer;
+  }
+  .nav-btn-icon {
+    color: $white-font-color;
+    font-size: 1.4rem;
+    padding: 0.1rem;
+  }
+  @include mq-md-and-down {
+    display: block;
+    z-index: 2;
+  }
+}
+
+.anchor-to-top {
+  @include landscape-orientation {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 7%;
+    margin-bottom: 3%;
+  }
+  a {
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    border-radius: 52px;
+    @include background-img("../images/anchorTop.png", contain, center, no-repeat);
+  }
+}

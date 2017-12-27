@@ -1,92 +1,95 @@
-.menu {
+.top-nav {
   position: absolute;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  max-width: 1360px;
   top: 0;
-  height: 74px;
-  width: 100%;
+  left: 0;
+  right: 0;
+  padding-top: 3%;
   z-index: 2;
-  .logo {
-    font-family: $logo-font;
-    color: $white-font-color;
-    padding-top: 2.8rem;
-    margin-left: 7%;
-    font-size: 1.7rem;
-    float: left;
+  @include mq-xl-and-up {
+    padding-top: 1.5%;
   }
-  nav {
-    float: right;
-    margin-right: 7%;
-    padding-top: 2.4rem;
-    ul {
-      @include ul(none, 0, 0, 1.5rem);
-      li {
-        float: left;
-        &:nth-child(-n+7) {
-          margin-right: 0.7rem;
-        }
-        @include mq-lg-and-down {
-          &:nth-child(-n+7) {
-            margin-right: 0.3rem;
-          }
-        }
-        @include mq-md-and-down {
-          &:not(:last-child) {
-            width: 100%;
-            margin-top: 1rem;
-            display: none;
-          }
-          &:last-child {
-            float: right;
-            display: inline-block;
-          }
-        }
-        a:not(.icon) {
-          margin-right: -0.6rem;
-          padding: 0.4rem 0.9rem;
-          @include links(inline-block, none, $white-font-color, 1rem, $main-font, 300);
-          &:hover {
-            border-radius: $border-radius;
-            box-shadow: $white-box-shadow;
-          }
-          &:focus {
-            @extend :hover;
-          }
-          @include mq-lg-and-down {
-            margin-right: -0.2rem;
-            padding: 0.3rem 0.4rem;
-          }
-        }
-        .icon {
-          margin-top: -0.4rem;
-          padding: 0.7rem;
-          border-radius: 5px;
-          border: 2px solid $white-font-color;
-          @include links(inline-block, none, $white-font-color, 35px);
-          @include mq-sm-and-down {
-            margin-top: 0;
-          }
-          display: none;
-        }
+}
+
+.logo {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 1.7rem;
+  text-decoration: none;
+  font-family: $logo-font;
+  color: $white-font-color;
+  margin-left: 7%;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  @include ul(none, 0, 7%, 0, 1.3rem);
+  .nav-link {
+    @include links(inline-block, none, $white-font-color, 1rem, $main-font, 300);
+  }
+}
+
+.responsive-nav {
+  .nav-li {
+    &:nth-child(-n+7) {
+      margin-right: 0.6rem;
+    }
+    a {
+      padding: .3rem .6rem;
+      @include mq-lg-and-down {
+        padding: .3rem .3rem;
+      }
+      &:hover {
+        border-radius: $border-radius;
+        box-shadow: $white-box-shadow;
+      }
+      &:focus {
+        @extend :hover;
       }
     }
   }
-  transition-property: height;
-  transition-duration: .6s;
-}
 
-.menu-height {
-  height: 0;
+  @include mq-md-and-down {
+    .nav-bar {
+      flex-direction: column;
+      position: absolute;
+      top: -150vh;
+      transition: all, .5s;
+      z-index: 2;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      background-color: $dark-bg-menu;
+      padding-top: 5.2rem;
+      a {
+        padding: .3rem 1.4rem;
+      }
+      .nav-li {
+        margin-right: 0;
+      }
+    }
+    .logo {
+      z-index: 3;
+    }
+  }
 }
 
 .fixed-menu {
-  height: 74px;
-  .logo {
-    padding-top: 1.6rem;
-  }
-  nav {
-    padding-top: 1.3rem
-  }
   position: fixed;
-  background-color: rgba(44, 44, 39, .9);
-  max-width: 1360px;
+  background-color: $dark-bg-menu;
+  opacity: 0.98;
   top: 0;
+  margin: 0 auto;
+  transition: all, .5s;
+  .nav-bar {
+    margin-right: 7%;
+  }
+  @include landscape-orientation {
+    display: none;
+  }
 }
