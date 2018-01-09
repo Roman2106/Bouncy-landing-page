@@ -10,9 +10,12 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   @include background-img("../../images/headerImg.jpg", cover, center, no-repeat, padding-box);
+  @include mq-md-and-down {
+    @include background-img("../../images/headerImg-768w.jpg", cover, center, no-repeat, padding-box);
+  }
   .content {
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 0 1fr;
     text-align: center;
     align-self: center;
     z-index: 1;

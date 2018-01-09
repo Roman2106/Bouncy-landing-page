@@ -1,0 +1,52 @@
+.this-bouncy {
+  padding: 7% 15%;
+}
+
+.this-bouncy-content {
+  max-width: 100%;
+  h3 {
+    @include all-h($headers-font, null, .2rem, $dark-font-color, null, 300, uppercase);
+  }
+  p {
+    font-family: $main-font;
+    color: $light-grey-font-color;
+    font-weight: 300;
+    line-height: 1.8rem;
+    display: block;
+    text-align: justify;
+    margin: 2rem 20rem 1rem 0;
+  }
+  .read-more {
+    @include mq-md-and-down {
+      line-height: 1.5rem;
+      margin: .1rem 0 1.2rem 0;
+    }
+  }
+  .read-more-text {
+    overflow: hidden;
+    max-height: 150vh;
+    transition-property: max-height;
+    transition-duration: .7s;
+    @include mq-md-and-down {
+      line-height: 1.5rem;
+      margin: .1rem 0 1.2rem 0;
+    }
+  }
+  img {
+    float: right;
+    max-width: 40%;
+    height: auto;
+    margin-left: 1rem;
+    transition-property: margin-top;
+    transition-duration: .7s;
+  }
+}
+
+p.read-more-text.collapsed {
+  max-height: 0;
+}
+
+.margin {
+  margin-top: 3rem;
+}
+

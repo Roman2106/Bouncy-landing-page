@@ -18,7 +18,7 @@ export const menuShow = navBar => {
   if (navBar.style.top === "0px") {
     navBar.style.top = "-400vh";
   } else {
-    navBar.style.top = 0;
+    navBar.style.top = "0";
   }
 };
 

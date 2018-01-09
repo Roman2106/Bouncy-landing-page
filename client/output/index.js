@@ -79,6 +79,9 @@ var navBar = document.getElementsByClassName("nav-bar")[0];
 var navButton = document.getElementsByClassName("nav-btn")[0];
 var menu = document.getElementsByClassName("top-nav")[0];
 var headerButtonToTop = document.getElementsByClassName("header-button-to-top")[0];
+var btnThisBouncyReadMore = document.getElementsByClassName("this-bouncy-readMore")[0];
+var readMoreText = document.getElementsByClassName("read-more-text")[0];
+var imgIPad = document.getElementsByClassName("iPad")[0];
 
 window.onscroll = function () {
   var scroll = document.documentElement.scrollTop;
@@ -89,6 +92,12 @@ window.onscroll = function () {
 navButton.onclick = function (e) {
   e.preventDefault();
   (0, _menu.menuShow)(navBar);
+};
+
+btnThisBouncyReadMore.onclick = function (e) {
+  e.preventDefault();
+  imgIPad.classList.toggle("margin");
+  readMoreText.classList.toggle("collapsed");
 };
 
 /***/ }),
@@ -121,7 +130,7 @@ var menuShow = exports.menuShow = function menuShow(navBar) {
   if (navBar.style.top === "0px") {
     navBar.style.top = "-400vh";
   } else {
-    navBar.style.top = 0;
+    navBar.style.top = "0";
   }
 };
 
