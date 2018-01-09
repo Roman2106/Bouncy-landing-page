@@ -1,0 +1,108 @@
+.details {
+  padding: 4.2rem 10% 4.2rem 10%;
+  background-color: $grey-bg;
+  position: relative;
+  a {
+    @include links(inline-block, none, null, null, null, null);
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    transition-property: background-image;
+    transition-duration: .7s;
+    &:nth-child(n+2) {
+      margin-left: 1.6rem;
+    }
+  }
+  .details-links {
+    text-align: center;
+    margin-top: 2.3rem;
+  }
+  a.firstDetailsLink {
+    background-image: url("../../images/heart-gray.png");
+    &:hover {
+      background-image: url("../../images/heart-green.png");
+    }
+  }
+  a.secondDetailsLink {
+    background-image: url("../../images/mouse-gray.png");
+    &:hover {
+      background-image: url("../../images/mause-green.png");
+    }
+  }
+  a.thirdDetailsLink {
+    background-image: url("../../images/bulb-gray.png");
+    &:hover {
+      background-image: url("../../images/bulb-green.png");
+    }
+  }
+  h3 {
+    @include all-h($headers-font, null, .2rem, $dark-font-color, null, 300, uppercase);
+    text-align: center;
+  }
+  h4 {
+    @include all-h($main-font, null, null, $dark-font-color, null, 400, lowecase);
+    margin-top: 2.3rem;
+  }
+  p {
+    font-family: $main-font;
+    color: $light-grey-font-color;
+    font-weight: 300;
+    line-height: 1.8rem;
+    display: block;
+    text-align: justify;
+  }
+  .detailsCenterText {
+    text-align: center;
+    margin-top: 2.3rem;
+  }
+  .details-bottom-text {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .detailsLeftText {
+    max-width: 20rem;
+  }
+  .detailsRightText {
+    max-width: 32rem;
+    @include mq-lg {
+      margin-left: 1rem;
+    }
+  }
+  .green-text {
+    color: $teal-font-color;
+  }
+
+  .creativeIdeasOne, .creativeIdeasTwo, .creativeIdeasThree {
+    display: none;
+    max-width: 20rem;
+    position: absolute;
+    margin: 0;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 1.2rem;
+    border: 1px solid $company-color;
+    border-radius: $border-radius;
+    background-color: $grey-bg;
+    span {
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      font-size: 1.5rem;
+      font-weight: lighter;
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        top: 10px;
+      }
+    }
+  }
+  .creativeImg {
+    text-align: center;
+    margin-top: 1.8rem;
+  }
+}

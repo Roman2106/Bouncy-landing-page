@@ -1,5 +1,5 @@
 .this-bouncy {
-  padding: 7% 15%;
+  padding: 7% 15% 10% 15%;
 }
 
 .this-bouncy-content {
@@ -14,12 +14,12 @@
     line-height: 1.8rem;
     display: block;
     text-align: justify;
-    margin: 2rem 20rem 1rem 0;
+    margin: 1.3rem 20rem 1.3rem 0;
   }
   .read-more {
     @include mq-md-and-down {
       line-height: 1.5rem;
-      margin: .1rem 0 1.2rem 0;
+      margin: .1rem 0 1.3rem 0;
     }
   }
   .read-more-text {
@@ -29,7 +29,7 @@
     transition-duration: .7s;
     @include mq-md-and-down {
       line-height: 1.5rem;
-      margin: .1rem 0 1.2rem 0;
+      margin: .1rem 0 1.5rem 0;
     }
   }
   img {

@@ -61,7 +61,6 @@
   border-radius: $border-radius;
   border: 1px solid $dark-font-color;
   padding: .3rem 1.5rem;
-  margin-top: 1rem;
   @include mq-sm-and-down {
     display: block;
     text-align: center;

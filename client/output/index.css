@@ -650,7 +650,6 @@ header:before {
   border-radius: 1.1rem;
   border: 1px solid #323A46;
   padding: .3rem 1.5rem;
-  margin-top: 1rem;
 }
 
 .this-bouncy-readMore:visited {
@@ -805,7 +804,7 @@ header:before {
 }
 
 .this-bouncy {
-  padding: 7% 15%;
+  padding: 7% 15% 10% 15%;
 }
 
 .this-bouncy-content {
@@ -827,13 +826,13 @@ header:before {
   line-height: 1.8rem;
   display: block;
   text-align: justify;
-  margin: 2rem 20rem 1rem 0;
+  margin: 1.3rem 20rem 1.3rem 0;
 }
 
 @media (max-width: 768px) {
   .this-bouncy-content .read-more {
     line-height: 1.5rem;
-    margin: .1rem 0 1.2rem 0;
+    margin: .1rem 0 1.3rem 0;
   }
 }
 
@@ -849,7 +848,7 @@ header:before {
 @media (max-width: 768px) {
   .this-bouncy-content .read-more-text {
     line-height: 1.5rem;
-    margin: .1rem 0 1.2rem 0;
+    margin: .1rem 0 1.5rem 0;
   }
 }
 
@@ -870,6 +869,171 @@ p.read-more-text.collapsed {
 
 .margin {
   margin-top: 3rem;
+}
+
+.details {
+  padding: 4.2rem 10% 4.2rem 10%;
+  background-color: #F2F3F2;
+  position: relative;
+}
+
+.details a {
+  display: inline-block;
+  text-decoration: none;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  -webkit-transition-property: background-image;
+  transition-property: background-image;
+  -webkit-transition-duration: .7s;
+          transition-duration: .7s;
+}
+
+.details a:nth-child(n+2) {
+  margin-left: 1.6rem;
+}
+
+.details .details-links {
+  text-align: center;
+  margin-top: 2.3rem;
+}
+
+.details a.firstDetailsLink {
+  background-image: url(./images/heart-gray.png);
+}
+
+.details a.firstDetailsLink:hover,
+.details .responsive-nav .nav-li a.firstDetailsLink:focus,
+.responsive-nav .nav-li .details a.firstDetailsLink:focus {
+  background-image: url(./images/heart-green.png);
+}
+
+.details a.secondDetailsLink {
+  background-image: url(./images/mouse-gray.png);
+}
+
+.details a.secondDetailsLink:hover,
+.details .responsive-nav .nav-li a.secondDetailsLink:focus,
+.responsive-nav .nav-li .details a.secondDetailsLink:focus {
+  background-image: url(./images/mause-green.png);
+}
+
+.details a.thirdDetailsLink {
+  background-image: url(./images/bulb-gray.png);
+}
+
+.details a.thirdDetailsLink:hover,
+.details .responsive-nav .nav-li a.thirdDetailsLink:focus,
+.responsive-nav .nav-li .details a.thirdDetailsLink:focus {
+  background-image: url(./images/bulb-green.png);
+}
+
+.details h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 0.2rem;
+  color: #323A46;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.details h4 {
+  font-family: "Open Sans", sans-serif;
+  color: #323A46;
+  font-weight: 400;
+  text-transform: lowecase;
+  margin-top: 2.3rem;
+}
+
+.details p {
+  font-family: "Open Sans", sans-serif;
+  color: #81868F;
+  font-weight: 300;
+  line-height: 1.8rem;
+  display: block;
+  text-align: justify;
+}
+
+.details .detailsCenterText {
+  text-align: center;
+  margin-top: 2.3rem;
+}
+
+.details .details-bottom-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.details .detailsLeftText {
+  max-width: 20rem;
+}
+
+.details .detailsRightText {
+  max-width: 32rem;
+}
+
+@media (max-width: 1360px) and (min-width: 959px) {
+  .details .detailsRightText {
+    margin-left: 1rem;
+  }
+}
+
+.details .green-text {
+  color: #00BD9A;
+}
+
+.details .creativeIdeasOne,
+.details .creativeIdeasTwo,
+.details .creativeIdeasThree {
+  display: none;
+  max-width: 20rem;
+  position: absolute;
+  margin: 0;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1.2rem;
+  border: 1px solid #00BD99;
+  border-radius: 1.1rem;
+  background-color: #F2F3F2;
+}
+
+.details .creativeIdeasOne span,
+.details .creativeIdeasTwo span,
+.details .creativeIdeasThree span {
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.details .creativeIdeasOne span:hover,
+.details .creativeIdeasTwo span:hover,
+.details .creativeIdeasThree span:hover {
+  cursor: pointer;
+}
+
+.details .creativeIdeasOne span:active,
+.details .creativeIdeasTwo span:active,
+.details .creativeIdeasThree span:active {
+  top: 10px;
+}
+
+.details .creativeImg {
+  text-align: center;
+  margin-top: 1.8rem;
 }
 
 @font-face {

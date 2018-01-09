@@ -63,14 +63,17 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var _menu = __webpack_require__(1);
+
+var _fade = __webpack_require__(14);
 
 __webpack_require__(2);
 
@@ -82,6 +85,16 @@ var headerButtonToTop = document.getElementsByClassName("header-button-to-top")[
 var btnThisBouncyReadMore = document.getElementsByClassName("this-bouncy-readMore")[0];
 var readMoreText = document.getElementsByClassName("read-more-text")[0];
 var imgIPad = document.getElementsByClassName("iPad")[0];
+var firstDetailsLink = document.getElementsByClassName("firstDetailsLink")[0];
+var creativeIdeasOne = document.getElementsByClassName("creativeIdeasOne")[0];
+var secondDetailsLink = document.getElementsByClassName("secondDetailsLink")[0];
+var creativeIdeasTwo = document.getElementsByClassName("creativeIdeasTwo")[0];
+var thirdDetailsLink = document.getElementsByClassName("thirdDetailsLink")[0];
+var creativeIdeasThree = document.getElementsByClassName("creativeIdeasThree")[0];
+
+var closeCreativeIdeasOne = document.getElementsByClassName("closeCreativeIdeasOne")[0];
+var closeCreativeIdeasTwo = document.getElementsByClassName("closeCreativeIdeasTwo")[0];
+var closeCreativeIdeasThree = document.getElementsByClassName("closeCreativeIdeasThree")[0];
 
 window.onscroll = function () {
   var scroll = document.documentElement.scrollTop;
@@ -100,8 +113,36 @@ btnThisBouncyReadMore.onclick = function (e) {
   readMoreText.classList.toggle("collapsed");
 };
 
+firstDetailsLink.onclick = function (e) {
+  e.preventDefault();
+  (0, _fade.fadeIn)(creativeIdeasOne);
+};
+
+secondDetailsLink.onclick = function (e) {
+  e.preventDefault();
+  (0, _fade.fadeIn)(creativeIdeasTwo);
+};
+
+thirdDetailsLink.onclick = function (e) {
+  e.preventDefault();
+  (0, _fade.fadeIn)(creativeIdeasThree);
+};
+
+closeCreativeIdeasOne.onclick = function () {
+  (0, _fade.fadeOut)(creativeIdeasOne);
+};
+
+closeCreativeIdeasTwo.onclick = function () {
+  (0, _fade.fadeOut)(creativeIdeasTwo);
+};
+
+closeCreativeIdeasThree.onclick = function () {
+  (0, _fade.fadeOut)(creativeIdeasThree);
+};
+
 /***/ }),
-/* 1 */
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -135,10 +176,49 @@ var menuShow = exports.menuShow = function menuShow(navBar) {
 };
 
 /***/ }),
-/* 2 */
+
+/***/ 14:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var fadeIn = exports.fadeIn = function fadeIn(elem) {
+  elem.style.opacity = 0;
+  elem.style.display = "block";
+  var tick = function tick() {
+    elem.style.opacity = +elem.style.opacity + 0.05;
+    if (+elem.style.opacity < 1) {
+      window.requestAnimationFrame && requestAnimationFrame(tick) || setTimeout(tick, 700);
+    }
+  };
+  tick();
+};
+
+var fadeOut = exports.fadeOut = function fadeOut(elem) {
+  elem.style.opacity = 1;
+  elem.style.display = "block";
+  var tick = function tick() {
+    elem.style.opacity = +elem.style.opacity - 0.05;
+    if (+elem.style.opacity > 0) {
+      window.requestAnimationFrame && requestAnimationFrame(tick) || setTimeout(tick, 700);
+    } else {
+      elem.style.display = "none";
+    }
+  };
+  tick();
+};
+
+/***/ }),
+
+/***/ 2:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-/******/ ]);
+
+/******/ });
