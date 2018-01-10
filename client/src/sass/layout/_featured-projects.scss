@@ -1,0 +1,130 @@
+.featured-projects {
+  margin: 0;
+  padding: 4.2rem 0;
+  h3 {
+    @include all-h($headers-font, null, .2rem, $dark-font-color, null, 300, uppercase);
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  p {
+    font-family: $main-font;
+    color: $light-grey-font-color;
+    font-weight: 300;
+    line-height: 1.8rem;
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .featured-projects-center {
+    text-align: center;
+    margin-top: 2.3rem;
+  }
+  .featured-projects-grid {
+    margin-top: 3rem;
+    div:nth-child(-n+3) {
+      position: relative;
+      &:before {
+        content: "";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        color: $white-font-color;
+        font-family: $headers-font;
+        letter-spacing: .2rem;
+        font-weight: 300;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $dark-overlay-color;
+        transition: all .7s ease-out;
+        //transition-duration: .7s;
+      }
+      &:hover {
+        cursor: pointer;
+        &:before {
+          content: "";
+          background: transparent;
+        }
+      }
+    }
+    div.f-pr-img-item1 {
+      grid-area: top;
+      transition: all .7s ease-out;
+      &:hover {
+        transform: scale(1.3);
+        z-index: 10;
+      }
+      &:before {
+        content: "VINTAGE";
+      }
+    }
+    div.f-pr-img-item2 {
+      grid-area: footer;
+      transition: all .7s ease-out;
+      &:hover {
+        transform: scale(1.3);
+        z-index: 10;
+      }
+      &:before {
+        content: "ORIGINAL";
+      }
+    }
+    div.f-pr-img-item3 {
+      grid-area: footer1;
+      transition: all .7s ease-out;
+      &:hover {
+        transform: scale(1.3);
+        z-index: 10;
+      }
+      &:before {
+        content: "BRANDING";
+      }
+    }
+    .featured-projects-footer {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+      grid-area: footer2;
+      padding: 2% 9%;
+      @include background-img("../../images/featured-projects-footer.jpg", cover, center, no-repeat, padding-box);
+      p {
+        color: white;
+        @include mq-md-and-down {
+          margin-top: 0;
+        }
+      }
+      @include mq-xl-and-down {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "top footer footer1" "footer2 footer2 footer2";
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    @include mq-md-and-down {
+      padding: 0 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: minmax(100px, 220px) minmax(100px, 220px);
+      grid-template-areas: "top top" "footer footer1" "footer2 footer2";
+      img {
+        margin: 0 auto;
+      }
+    }
+    @include mq-sm-and-down {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px, 200px) minmax(100px, 200px) minmax(100px, 200px);
+      grid-template-areas: "top" "footer" "footer1" "footer2";
+    }
+  }
+}

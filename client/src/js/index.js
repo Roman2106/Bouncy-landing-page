@@ -16,7 +16,6 @@ const secondDetailsLink = document.getElementsByClassName("secondDetailsLink")[0
 const creativeIdeasTwo = document.getElementsByClassName("creativeIdeasTwo")[0];
 const thirdDetailsLink = document.getElementsByClassName("thirdDetailsLink")[0];
 const creativeIdeasThree = document.getElementsByClassName("creativeIdeasThree")[0];
-
 const closeCreativeIdeasOne = document.getElementsByClassName("closeCreativeIdeasOne")[0];
 const closeCreativeIdeasTwo = document.getElementsByClassName("closeCreativeIdeasTwo")[0];
 const closeCreativeIdeasThree = document.getElementsByClassName("closeCreativeIdeasThree")[0];
@@ -64,6 +63,5 @@ closeCreativeIdeasTwo.onclick = () => {
 closeCreativeIdeasThree.onclick = () => {
   fadeOut(creativeIdeasThree);
 };
-
 
 

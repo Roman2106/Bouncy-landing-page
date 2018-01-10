@@ -91,7 +91,6 @@ var secondDetailsLink = document.getElementsByClassName("secondDetailsLink")[0];
 var creativeIdeasTwo = document.getElementsByClassName("creativeIdeasTwo")[0];
 var thirdDetailsLink = document.getElementsByClassName("thirdDetailsLink")[0];
 var creativeIdeasThree = document.getElementsByClassName("creativeIdeasThree")[0];
-
 var closeCreativeIdeasOne = document.getElementsByClassName("closeCreativeIdeasOne")[0];
 var closeCreativeIdeasTwo = document.getElementsByClassName("closeCreativeIdeasTwo")[0];
 var closeCreativeIdeasThree = document.getElementsByClassName("closeCreativeIdeasThree")[0];

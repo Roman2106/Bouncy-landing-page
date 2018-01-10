@@ -14,11 +14,10 @@
     line-height: 1.8rem;
     display: block;
     text-align: justify;
-    margin: 1.3rem 20rem 1.3rem 0;
+    margin: 2.3rem 20rem 1.3rem 0;
   }
   .read-more {
     @include mq-md-and-down {
-      line-height: 1.5rem;
       margin: .1rem 0 1.3rem 0;
     }
   }
@@ -28,7 +27,6 @@
     transition-property: max-height;
     transition-duration: .7s;
     @include mq-md-and-down {
-      line-height: 1.5rem;
       margin: .1rem 0 1.5rem 0;
     }
   }
