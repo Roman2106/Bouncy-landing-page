@@ -10,13 +10,13 @@
 </head>
 <body>
 <div class="wrapper">
-  <header class="header-page">
+  <header class="header-page" id="navHeader">
     <nav class="top-nav responsive-nav">
       <a href="#" class="logo">BOUNCY</a>
       <ul class="nav-bar">
-        <li class="nav-li"><a class="nav-link" href="#">Hello</a></li>
-        <li class="nav-li"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-li"><a class="nav-link" href="#">Featured</a></li>
+        <li class="nav-li"><a class="nav-link" href="#navHeader">Hello</a></li>
+        <li class="nav-li"><a class="nav-link" href="#navThisBouncy">About</a></li>
+        <li class="nav-li"><a class="nav-link" href="#navFeatured">Featured</a></li>
         <li class="nav-li"><a class="nav-link" href="#">Services</a></li>
         <li class="nav-li"><a class="nav-link" href="#">Portfolio</a></li>
         <li class="nav-li"><a class="nav-link" href="#">Team</a></li>
@@ -34,14 +34,14 @@
           praesentium voluptatum</p>
       </div>
       <div class="header-button-to-top">
-        <a href="#"></a>
+        <a href="#navHeader"></a>
       </div>
       <div class="header-button">
         <a href="#" class="anchor"></a>
       </div>
     </div>
   </header>
-  <section class="this-bouncy">
+  <section class="this-bouncy" id="navThisBouncy">
     <div class="this-bouncy-content">
       <img src="../src/images/iPad.png" class="iPad">
       <h3>This is bouncy</h3>
@@ -114,7 +114,7 @@
         delectus dicta ullam sed. Ab, qui!</p>
     </div>
   </section>
-  <section class="featured-projects">
+  <section class="featured-projects" id="navFeatured">
     <h3>Featured projects</h3>
     <p class="featured-projects-center">
       At vero eos et accusamus et iusto dignissimos ducimus qui<br>
@@ -134,6 +134,29 @@
         <p>At vero eos et <b>accusamus</b> et iusto odio dignissimos ducimus qui blanditiis, iusto dignissimos ducimus
           qui</p>
         <a href="#" class="featured-projects-footer-button">Submit Now</a>
+      </div>
+    </div>
+    <div class="feedback">
+      <form>
+        <span class="closeFeedback">&times;</span>
+        <p>
+          <label for="phoneNumber">Your phone number</label>
+          <input type="text" class="phone-number" id="phoneNumber" required>
+          <a href="#" class="featured-projects-submit-now">Submit Now</a>
+        </p>
+      </form>
+    </div>
+  </section>
+  <section class="our-services">
+    <div class="progressContainer">
+      <div id="container1">
+        <p>Branding</p>
+      </div>
+      <div id="container2">
+        <p>Web Design</p>
+      </div>
+      <div id="container3">
+        <p>UI / UX</p>
       </div>
     </div>
   </section>

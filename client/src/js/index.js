@@ -1,9 +1,10 @@
 import {menuScroll, menuShow} from "./menu";
 import {fadeIn, fadeOut} from "./fade";
+import {scrollTo} from "./scrollTo";
+import {barOne, barTwo, barThree} from "./circleProgress";
 import "../sass/index.scss";
 
 const bouncy = document.getElementsByClassName("this-bouncy")[0];
-const navBar = document.getElementsByClassName("nav-bar")[0];
 const navButton = document.getElementsByClassName("nav-btn")[0];
 const menu = document.getElementsByClassName("top-nav")[0];
 const headerButtonToTop = document.getElementsByClassName("header-button-to-top")[0];
@@ -19,6 +20,10 @@ const creativeIdeasThree = document.getElementsByClassName("creativeIdeasThree")
 const closeCreativeIdeasOne = document.getElementsByClassName("closeCreativeIdeasOne")[0];
 const closeCreativeIdeasTwo = document.getElementsByClassName("closeCreativeIdeasTwo")[0];
 const closeCreativeIdeasThree = document.getElementsByClassName("closeCreativeIdeasThree")[0];
+const featuredProjectSubmit = document.getElementsByClassName("featured-projects-footer-button")[0];
+const feedbackPhone = document.getElementsByClassName("feedback")[0];
+const closeFeedback = document.getElementsByClassName("closeFeedback")[0];
+const linkNav = document.querySelectorAll("[href^=\"#nav\"]");
 
 window.onscroll = () => {
   let scroll = document.documentElement.scrollTop;
@@ -26,9 +31,19 @@ window.onscroll = () => {
   menuScroll(scroll, sfScroll, bouncy, menu, headerButtonToTop);
 };
 
+window.onkeydown = e => {
+  switch (e.keyCode) {
+    case 27:
+      fadeOut(feedbackPhone);
+      fadeOut(creativeIdeasOne);
+      fadeOut(creativeIdeasTwo);
+      fadeOut(creativeIdeasThree);
+  }
+};
+
 navButton.onclick = e => {
   e.preventDefault();
-  menuShow(navBar);
+  menuShow();
 };
 
 btnThisBouncyReadMore.onclick = e => {
@@ -64,4 +79,18 @@ closeCreativeIdeasThree.onclick = () => {
   fadeOut(creativeIdeasThree);
 };
 
+featuredProjectSubmit.onclick = e => {
+  e.preventDefault();
+  fadeIn(feedbackPhone);
+};
+
+closeFeedback.onclick = () => {
+  fadeOut(feedbackPhone);
+};
+
+scrollTo(linkNav, 0.4);
+
+barOne.animate(1.0);
+barTwo.animate(0.45);
+barThree.animate(0.6);
 

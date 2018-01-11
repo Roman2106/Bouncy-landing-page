@@ -1,3 +1,5 @@
+const navBar = document.getElementsByClassName("nav-bar")[0];
+
 export const menuScroll = (scroll, sfScroll, bouncy, menu, headerButtonToTop) => {
   const offsetBouncy = bouncy.offsetTop;
   if (scroll > offsetBouncy || sfScroll > offsetBouncy) {
@@ -14,7 +16,7 @@ export const menuScroll = (scroll, sfScroll, bouncy, menu, headerButtonToTop) =>
   }
 };
 
-export const menuShow = navBar => {
+export const menuShow = () => {
   if (navBar.style.top === "0px") {
     navBar.style.top = "-400vh";
   } else {

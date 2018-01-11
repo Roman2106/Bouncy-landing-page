@@ -1,6 +1,7 @@
 .featured-projects {
   margin: 0;
   padding: 4.2rem 0;
+  position: relative;
   h3 {
     @include all-h($headers-font, null, .2rem, $dark-font-color, null, 300, uppercase);
     text-align: center;
@@ -40,7 +41,6 @@
         bottom: 0;
         background-color: $dark-overlay-color;
         transition: all .7s ease-out;
-        //transition-duration: .7s;
       }
       &:hover {
         cursor: pointer;
@@ -125,6 +125,57 @@
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: minmax(100px, 200px) minmax(100px, 200px) minmax(100px, 200px);
       grid-template-areas: "top" "footer" "footer1" "footer2";
+    }
+  }
+}
+
+.feedback {
+  z-index: 10;
+  position: fixed;
+  background-color: $dark-overlay-color;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  form {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 1.2rem;
+    border: 1px solid $company-color;
+    border-radius: $border-radius;
+    background-color: white;
+    p {
+      color: black;
+    }
+    span {
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      font-size: 1.5rem;
+      font-weight: lighter;
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        top: 10px;
+      }
+    }
+    input {
+      outline: none;
+      border: 1px solid $light-grey-font-color;
+      width: 80%;
+      margin-top: 1rem;
+      height: 2.2rem;
+      color: $light-grey-font-color;
+      font-family: $headers-font;
+      letter-spacing: .2rem;
+      font-weight: 300;
     }
   }
 }
