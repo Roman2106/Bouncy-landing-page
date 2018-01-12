@@ -487,6 +487,42 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "BigJohn";
+  src: url(./fonts/BIG-JOHN.otf);
+}
+
+.wrapper p {
+  font-family: "Open Sans", sans-serif;
+  color: #81868F;
+  font-weight: 300;
+  line-height: 1.8rem;
+  display: block;
+}
+
+.description-caption {
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 0.2rem;
+  color: #323A46;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.description-paragraph {
+  font-family: "Open Sans", sans-serif;
+  color: #81868F;
+  font-weight: 300;
+  line-height: 1.8rem;
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2.3rem;
+  text-align: center;
+}
+
 .wrapper {
   max-width: 1360px;
   margin: 0 auto;
@@ -858,13 +894,8 @@ header:before {
 }
 
 .this-bouncy-content p {
-  font-family: "Open Sans", sans-serif;
-  color: #81868F;
-  font-weight: 300;
-  line-height: 1.8rem;
-  display: block;
   text-align: justify;
-  margin: 2.3rem 20rem 1.3rem 0;
+  margin: 1.3rem 20rem 1.3rem 0;
 }
 
 @media (max-width: 768px) {
@@ -964,15 +995,6 @@ p.read-more-text.collapsed {
   background-image: url(./images/bulb-green.png);
 }
 
-.details h3 {
-  font-family: "Source Sans Pro", sans-serif;
-  letter-spacing: 0.2rem;
-  color: #323A46;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .details h4 {
   font-family: "Open Sans", sans-serif;
   color: #323A46;
@@ -981,18 +1003,9 @@ p.read-more-text.collapsed {
   margin-top: 2.3rem;
 }
 
-.details p {
-  font-family: "Open Sans", sans-serif;
-  color: #81868F;
-  font-weight: 300;
-  line-height: 1.8rem;
+.details p:not(.description-paragraph) {
   display: block;
   text-align: justify;
-}
-
-.details .detailsCenterText {
-  text-align: center;
-  margin-top: 2.3rem;
 }
 
 .details .details-bottom-text {
@@ -1078,30 +1091,9 @@ p.read-more-text.collapsed {
   position: relative;
 }
 
-.featured-projects h3 {
-  font-family: "Source Sans Pro", sans-serif;
-  letter-spacing: 0.2rem;
-  color: #323A46;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .featured-projects p {
-  font-family: "Open Sans", sans-serif;
-  color: #81868F;
-  font-weight: 300;
-  line-height: 1.8rem;
-  display: block;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.featured-projects .featured-projects-center {
-  text-align: center;
-  margin-top: 2.3rem;
 }
 
 .featured-projects .featured-projects-grid {
@@ -1327,9 +1319,9 @@ p.read-more-text.collapsed {
   font-weight: 300;
 }
 
-.our-services #container1,
-.our-services #container2,
-.our-services #container3 {
+.our-services .progressContainer #container1,
+.our-services .progressContainer #container2,
+.our-services .progressContainer #container3 {
   margin: 1rem .5rem;
   width: 124px;
   height: 124px;
@@ -1340,9 +1332,9 @@ p.read-more-text.collapsed {
   font-size: 1.3rem;
 }
 
-.our-services #container1 p,
-.our-services #container2 p,
-.our-services #container3 p {
+.our-services .progressContainer #container1 p,
+.our-services .progressContainer #container2 p,
+.our-services .progressContainer #container3 p {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -1352,11 +1344,5 @@ p.read-more-text.collapsed {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-family: "Roboto", sans-serif;
-  color: #81868F;
   font-size: 1rem;
-}
-
-@font-face {
-  font-family: "BigJohn";
-  src: url(./fonts/BIG-JOHN.otf);
 }

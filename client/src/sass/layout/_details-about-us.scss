@@ -35,25 +35,13 @@
       background-image: url("../../images/bulb-green.png");
     }
   }
-  h3 {
-    @include all-h($headers-font, null, .2rem, $dark-font-color, null, 300, uppercase);
-    text-align: center;
-  }
   h4 {
     @include all-h($main-font, null, null, $dark-font-color, null, 400, lowecase);
     margin-top: 2.3rem;
   }
-  p {
-    font-family: $main-font;
-    color: $light-grey-font-color;
-    font-weight: 300;
-    line-height: 1.8rem;
+  p:not(.description-paragraph) {
     display: block;
     text-align: justify;
-  }
-  .detailsCenterText {
-    text-align: center;
-    margin-top: 2.3rem;
   }
   .details-bottom-text {
     display: flex;

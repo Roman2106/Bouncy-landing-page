@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "BigJohn";
+  src: url(../../fonts/BIG-JOHN.otf);
+}
+
+.wrapper p{
+  font-family: $main-font;
+  color: $light-grey-font-color;
+  font-weight: 300;
+  line-height: 1.8rem;
+  display: block;
+}
+
+.description-caption {
+  @include all-h($headers-font, null, .2rem, $dark-font-color, null, 300, uppercase);
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.description-paragraph {
+  font-family: $main-font;
+  color: $light-grey-font-color;
+  font-weight: 300;
+  line-height: 1.8rem;
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2.3rem;
+  text-align: center;
+}

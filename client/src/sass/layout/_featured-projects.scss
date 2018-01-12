@@ -2,24 +2,9 @@
   margin: 0;
   padding: 4.2rem 0;
   position: relative;
-  h3 {
-    @include all-h($headers-font, null, .2rem, $dark-font-color, null, 300, uppercase);
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
   p {
-    font-family: $main-font;
-    color: $light-grey-font-color;
-    font-weight: 300;
-    line-height: 1.8rem;
-    display: block;
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  .featured-projects-center {
-    text-align: center;
-    margin-top: 2.3rem;
   }
   .featured-projects-grid {
     margin-top: 3rem;

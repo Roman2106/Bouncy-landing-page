@@ -166,9 +166,9 @@ closeFeedback.onclick = function () {
 
 (0, _scrollTo.scrollTo)(linkNav, 0.4);
 
-_circleProgress.barOne.animate(1.0);
-_circleProgress.barTwo.animate(0.45);
-_circleProgress.barThree.animate(0.6);
+_circleProgress.barOne.animate(0.85);
+_circleProgress.barTwo.animate(0.8);
+_circleProgress.barThree.animate(0.75);
 
 /***/ }),
 /* 1 */

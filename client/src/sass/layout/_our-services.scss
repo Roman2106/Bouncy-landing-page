@@ -1,24 +1,25 @@
 .our-services {
-  #container1, #container2, #container3 {
-    margin: 1rem .5rem;
-    width: 124px;
-    height: 124px;
-    float: left;
-    position: relative;
-    font-family: $technical-font;
-    font-weight: 400;
-    font-size: 1.3rem;
-    p {
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 115%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
+  .progressContainer {
+    #container1, #container2, #container3 {
+      margin: 1rem .5rem;
+      width: 124px;
+      height: 124px;
+      float: left;
+      position: relative;
       font-family: $technical-font;
-      color: $light-grey-font-color;
-      font-size: 1rem;
+      font-weight: 400;
+      font-size: 1.3rem;
+      p {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 115%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        font-family: $technical-font;
+        font-size: 1rem;
+      }
     }
   }
 }
