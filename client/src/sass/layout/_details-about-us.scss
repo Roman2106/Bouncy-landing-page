@@ -35,10 +35,6 @@
       background-image: url("../../images/bulb-green.png");
     }
   }
-  h4 {
-    @include all-h($main-font, null, null, $dark-font-color, null, 400, lowecase);
-    margin-top: 2.3rem;
-  }
   p:not(.description-paragraph) {
     display: block;
     text-align: justify;
@@ -50,17 +46,11 @@
   }
   .detailsLeftText {
     max-width: 20rem;
+    margin-top: 0;
   }
   .detailsRightText {
     max-width: 32rem;
-    @include mq-lg {
-      margin-left: 1rem;
-    }
   }
-  .green-text {
-    color: $teal-font-color;
-  }
-
   .creativeIdeasOne, .creativeIdeasTwo, .creativeIdeasThree {
     display: none;
     max-width: 20rem;
@@ -89,7 +79,7 @@
       }
     }
   }
-  .creativeImg {
+  p.creativeImg {
     text-align: center;
     margin-top: 1.8rem;
   }

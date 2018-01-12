@@ -3,12 +3,17 @@
   src: url(../../fonts/BIG-JOHN.otf);
 }
 
-.wrapper p{
+.wrapper p {
   font-family: $main-font;
   color: $light-grey-font-color;
   font-weight: 300;
   line-height: 1.8rem;
   display: block;
+}
+
+.wrapper h4 {
+  @include all-h($main-font, null, null, $dark-font-color, null, 400, lowecase);
+  margin-top: 2.3rem;
 }
 
 .description-caption {
@@ -28,4 +33,8 @@
   padding-right: 1rem;
   margin-top: 2.3rem;
   text-align: center;
+}
+
+.green-text {
+  color: $teal-font-color;
 }

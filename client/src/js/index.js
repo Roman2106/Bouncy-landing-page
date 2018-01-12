@@ -24,6 +24,8 @@ const featuredProjectSubmit = document.getElementsByClassName("featured-projects
 const feedbackPhone = document.getElementsByClassName("feedback")[0];
 const closeFeedback = document.getElementsByClassName("closeFeedback")[0];
 const linkNav = document.querySelectorAll("[href^=\"#nav\"]");
+const linksServices = document.getElementsByClassName("forClick");
+
 
 window.onscroll = () => {
   let scroll = document.documentElement.scrollTop;
@@ -90,7 +92,35 @@ closeFeedback.onclick = () => {
 
 scrollTo(linkNav, 0.4);
 
-barOne.animate(0.85);
-barTwo.animate(0.8);
-barThree.animate(0.75);
+for (let i = 0; i < linksServices.length; i++) {
+  linksServices[i].onclick = e => {
+    e.preventDefault();
+    switch (e.target.className) {
+      case "first-services-link forClick":
+        barOne.animate(0.85);
+        barTwo.animate(0.8);
+        barThree.animate(0.75);
+        break;
+      case "second-services-link forClick":
+        barOne.animate(0.75);
+        barTwo.animate(0.48);
+        barThree.animate(0.96);
+        break;
+      case "third-services-link forClick":
+        barOne.animate(0.55);
+        barTwo.animate(0.7);
+        barThree.animate(0.85);
+        break;
+      case "forth-services-link forClick":
+        barOne.animate(1);
+        barTwo.animate(0.9);
+        barThree.animate(0.6);
+        break;
+    }
+    barOne.animate(0.8);
+    barTwo.animate(0.9);
+    barThree.animate(0.6);
+  }
+}
+
 

@@ -100,6 +100,7 @@ var featuredProjectSubmit = document.getElementsByClassName("featured-projects-f
 var feedbackPhone = document.getElementsByClassName("feedback")[0];
 var closeFeedback = document.getElementsByClassName("closeFeedback")[0];
 var linkNav = document.querySelectorAll("[href^=\"#nav\"]");
+var linksServices = document.getElementsByClassName("forClick");
 
 window.onscroll = function () {
   var scroll = document.documentElement.scrollTop;
@@ -166,9 +167,36 @@ closeFeedback.onclick = function () {
 
 (0, _scrollTo.scrollTo)(linkNav, 0.4);
 
-_circleProgress.barOne.animate(0.85);
-_circleProgress.barTwo.animate(0.8);
-_circleProgress.barThree.animate(0.75);
+for (var i = 0; i < linksServices.length; i++) {
+  linksServices[i].onclick = function (e) {
+    e.preventDefault();
+    switch (e.target.className) {
+      case "first-services-link forClick":
+        _circleProgress.barOne.animate(0.85);
+        _circleProgress.barTwo.animate(0.8);
+        _circleProgress.barThree.animate(0.75);
+        break;
+      case "second-services-link forClick":
+        _circleProgress.barOne.animate(0.75);
+        _circleProgress.barTwo.animate(0.48);
+        _circleProgress.barThree.animate(0.96);
+        break;
+      case "third-services-link forClick":
+        _circleProgress.barOne.animate(0.55);
+        _circleProgress.barTwo.animate(0.7);
+        _circleProgress.barThree.animate(0.85);
+        break;
+      case "forth-services-link forClick":
+        _circleProgress.barOne.animate(1);
+        _circleProgress.barTwo.animate(0.9);
+        _circleProgress.barThree.animate(0.6);
+        break;
+    }
+    _circleProgress.barOne.animate(0.8);
+    _circleProgress.barTwo.animate(0.9);
+    _circleProgress.barThree.animate(0.6);
+  };
+}
 
 /***/ }),
 /* 1 */

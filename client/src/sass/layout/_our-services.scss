@@ -1,24 +1,141 @@
 .our-services {
-  .progressContainer {
-    #container1, #container2, #container3 {
-      margin: 1rem .5rem;
-      width: 124px;
-      height: 124px;
-      float: left;
-      position: relative;
-      font-family: $technical-font;
-      font-weight: 400;
-      font-size: 1.3rem;
-      p {
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        top: 115%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+  padding: 0 10% 4.2rem 10%;
+  .our-services-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    @include mq-sm-and-down {
+      flex-flow: column nowrap;
+    }
+    ul {
+      @include ul(none, 0, 0, 0, null);
+      margin-top: 2.3rem;
+      flex-basis: 60px;
+      @include mq-lg-and-down {
+        flex-basis: 50px;
+      }
+      @include mq-sm-and-down {
+        order: 2;
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+      li {
+        margin-bottom: 1rem;
+        @include mq-sm-and-down {
+          display: inline-block;
+          &:nth-child(n+2){
+            margin-left: 10px;
+          }
+        }
+        a {
+          @include links(inline-block, none, null, null, null, null);
+          width: 53px;
+          height: 53px;
+          border-radius: 50%;
+          transition-property: background-image;
+          transition-duration: .7s;
+        }
+        .first-services-link {
+          background-image: url("../../images/wrench-gray.png");
+          &:hover {
+            background-image: url("../../images/wrench-green.png");
+          }
+        }
+        .second-services-link {
+          background-image: url("../../images/cushion-gray.png");
+          &:hover {
+            background-image: url("../../images/cushion-green.png");
+          }
+        }
+        .third-services-link {
+          background-image: url("../../images/joystick-gray.png");
+          &:hover {
+            background-image: url("../../images/joystick-green.png");
+          }
+        }
+        .forth-services-link {
+          background-image: url("../../images/plug-gray.png");
+          &:hover {
+            background-image: url("../../images/plug-green.png");
+          }
+        }
+      }
+    }
+    .our-services-text {
+      margin-left: 2rem;
+      flex-basis: 500px;
+      text-align: justify;
+      @include mq-lg-and-down {
+        flex-basis: 400px;
+        margin-left: 1rem;
+      }
+      @include mq-sm-and-down {
+        order: 1;
+        flex-basis: 100%;
+        margin-left: 0;
+        h4 {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+    .progressContainer {
+      margin-left: 2rem;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      @include mq-lg-and-down {
+        margin-left: 1rem;
+      }
+      @include mq-md-and-down {
+        flex-flow: column nowrap;
+        align-content: center;
+        justify-content: space-between;
+      }
+      @include mq-sm-and-down {
+        order: 3;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-top: 1.5rem;
+        margin-left: 0;
+      }
+      #container1, #container2, #container3 {
+        margin: 1rem .5rem 1rem .5rem;
+        width: 124px;
+        height: 124px;
+        float: left;
+        position: relative;
         font-family: $technical-font;
-        font-size: 1rem;
+        font-weight: 400;
+        font-size: 1.3rem;
+        @include mq-lg-and-down {
+          width: 95px;
+          height: 95px;
+          margin: 0 .1rem;
+        }
+        @include mq-md-and-down {
+          width: 90px;
+          height: 90px;
+        }
+        @include mq-sm-and-down {
+          width: 85px;
+          height: 85px;
+          font-size: 1.2rem;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 115%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%);
+          font-family: $technical-font;
+          font-size: 1rem;
+          @include mq-sm-and-down {
+            font-size: .98rem;
+          }
+        }
       }
     }
   }
