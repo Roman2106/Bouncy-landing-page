@@ -1082,7 +1082,7 @@ p.read-more-text.collapsed {
 
 .featured-projects {
   margin: 0;
-  padding: 4.2rem 0;
+  padding: 4.2rem 0 0 0;
   position: relative;
 }
 
@@ -1315,7 +1315,12 @@ p.read-more-text.collapsed {
 }
 
 .our-services {
-  padding: 0 10% 4.2rem 10%;
+  padding: 4.2rem 10% 4.2rem 10%;
+  background-color: #F2F3F2;
+}
+
+.our-services h3 {
+  margin-top: 0;
 }
 
 .our-services .our-services-container {
@@ -1580,4 +1585,179 @@ p.read-more-text.collapsed {
   .our-services .our-services-container .progressContainer #container3 p {
     font-size: .98rem;
   }
+}
+
+.our-services-impressed {
+  padding: 7%;
+  background-image: url(./images/our_services_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+}
+
+.our-services-impressed h3 {
+  color: white;
+  text-align: left;
+  padding: 0;
+}
+
+.our-services-impressed p {
+  text-align: justify;
+  max-width: 45%;
+}
+
+@media (max-width: 768px) {
+  .our-services-impressed p {
+    max-width: 100%;
+  }
+}
+
+.our-services-impressed p:last-child b {
+  color: white;
+}
+
+.our-services-impressed img {
+  margin-left: 1rem;
+  margin-top: -14%;
+  max-width: 50%;
+  height: auto;
+  float: right;
+}
+
+.portfolio {
+  padding: 4.2rem 9%;
+  background-color: #F2F3F2;
+}
+
+.portfolio .grid {
+  margin: 2.8rem auto;
+}
+
+.portfolio .grid-item {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.portfolio .grid-footer {
+  max-width: 100%;
+  background-image: url(./images/green_img_portfolio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+}
+
+.portfolio .grid-footer p {
+  text-align: center;
+  color: white;
+  padding: 4.5rem 1rem;
+  margin: 0;
+}
+
+.portfolio figure.effect-romero {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #30302B;
+}
+
+.portfolio figure.effect-romero figcaption {
+  color: #fff;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.portfolio figure.effect-romero img {
+  -webkit-transition: opacity .35s, -webkit-transform .35s;
+  transition: opacity .35s, -webkit-transform .35s;
+  transition: opacity .35s, transform .35s;
+  transition: opacity .35s, transform .35s, -webkit-transform .35s;
+  -webkit-transform: translate3d(0, 0, 300px);
+          transform: translate3d(0, 0, 300px);
+  display: block;
+  opacity: 1;
+}
+
+.portfolio figure.effect-romero figcaption::before,
+.portfolio figure.effect-romero figcaption::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  background: #00BD99;
+  -webkit-transition: opacity .35s, -webkit-transform .35s;
+  transition: opacity .35s, -webkit-transform .35s;
+  transition: opacity .35s, transform .35s;
+  transition: opacity .35s, transform .35s, -webkit-transform .35s;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+}
+
+.portfolio figure.effect-romero h3,
+.portfolio figure.effect-romero p {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  -webkit-transition: -webkit-transform .35s;
+  transition: -webkit-transform .35s;
+  transition: transform .35s;
+  transition: transform .35s, -webkit-transform .35s;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio figure.effect-romero h3 {
+  color: white;
+  -webkit-transform: translate3d(0, -150%, 0) translate3d(0, 100%, 0);
+          transform: translate3d(0, -150%, 0) translate3d(0, 100%, 0);
+}
+
+.portfolio figure.effect-romero p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+  color: white;
+  -webkit-transform: translate3d(0, -60%, 0) translate3d(0, 130%, 0);
+          transform: translate3d(0, -60%, 0) translate3d(0, 130%, 0);
+}
+
+.portfolio figure.effect-romero:hover {
+  cursor: pointer;
+}
+
+.portfolio figure.effect-romero:hover h3 {
+  -webkit-transform: translate3d(0, -50%, 0) translate3d(0, 40%, 0);
+          transform: translate3d(0, -50%, 0) translate3d(0, 40%, 0);
+}
+
+.portfolio figure.effect-romero:hover p {
+  -webkit-transform: translate3d(0, -50%, 0) translate3d(0, 100%, 0);
+          transform: translate3d(0, -50%, 0) translate3d(0, 100%, 0);
+}
+
+.portfolio figure.effect-romero:hover figcaption::before {
+  opacity: .5;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+
+.portfolio figure.effect-romero:hover figcaption::after {
+  opacity: .5;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+          transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+}
+
+.portfolio figure.effect-romero:hover img {
+  opacity: .3;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }

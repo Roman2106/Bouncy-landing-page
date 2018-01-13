@@ -1,5 +1,9 @@
 .our-services {
-  padding: 0 10% 4.2rem 10%;
+  padding: 4.2rem 10% 4.2rem 10%;
+  background-color: $grey-bg;
+  h3 {
+    margin-top: 0;
+  }
   .our-services-container {
     display: flex;
     flex-flow: row nowrap;
@@ -23,7 +27,7 @@
         margin-bottom: 1rem;
         @include mq-sm-and-down {
           display: inline-block;
-          &:nth-child(n+2){
+          &:nth-child(n+2) {
             margin-left: 10px;
           }
         }
@@ -138,5 +142,32 @@
         }
       }
     }
+  }
+}
+
+.our-services-impressed {
+  padding: 7%;
+  @include background-img("../../images/our_services_bg.jpg", cover, center, no-repeat, padding-box);
+  h3 {
+    color: white;
+    text-align: left;
+    padding: 0;
+  }
+  p {
+    text-align: justify;
+    max-width: 45%;
+    @include mq-md-and-down {
+      max-width: 100%;
+    }
+  }
+  p:last-child b {
+    color: white;
+  }
+  img {
+    margin-left: 1rem;
+    margin-top: -14%;
+    max-width: 50%;
+    height: auto;
+    float: right;
   }
 }

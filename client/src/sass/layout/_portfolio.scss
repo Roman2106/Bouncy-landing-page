@@ -1,0 +1,94 @@
+.portfolio {
+  padding: 4.2rem 9%;
+  background-color: $grey-bg;
+  .grid {
+    margin: 2.8rem auto;
+  }
+  .grid-item {
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .grid-footer {
+    max-width: 100%;
+    @include background-img("../../images/green_img_portfolio.jpg", cover, center, no-repeat, padding-box);
+    p {
+      text-align: center;
+      color: white;
+      padding: 4.5rem 1rem;
+      margin: 0;
+    }
+  }
+  figure.effect-romero {
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #30302B;
+    figcaption {
+      color: #fff;
+      font-size: 1.25em;
+      backface-visibility: hidden;
+    }
+    img {
+      transition: opacity .35s, transform .35s;
+      transform: translate3d(0, 0, 300px);
+      display: block;
+      opacity: 1;
+    }
+    figcaption::before, figcaption::after {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      width: 80%;
+      height: 1px;
+      background: $company-color;;
+      transition: opacity .35s, transform .35s;
+      transform: translate3d(-50%, -50%, 0);
+      pointer-events: none;
+    }
+    h3, p {
+      position: absolute;
+      top: 30%;
+      left: 0;
+      width: 100%;
+      transition: transform .35s;
+      margin: 0;
+      padding: 0;
+    }
+    h3 {
+      color: white;
+      transform: translate3d(0, -150%, 0) translate3d(0, 100%, 0);
+    }
+    p {
+      letter-spacing: 1px;
+      font-size: 68.5%;
+      color: white;
+      transform: translate3d(0, -60%, 0) translate3d(0, 130%, 0);
+    }
+    &:hover {
+      cursor: pointer;
+      h3 {
+        transform: translate3d(0, -50%, 0) translate3d(0, 40%, 0);
+      }
+      p {
+        transform: translate3d(0, -50%, 0) translate3d(0, 100%, 0);
+      }
+      figcaption::before {
+        opacity: .5;
+        transform: translate3d(-50%, -50%, 0) rotate(45deg);
+      }
+      figcaption::after {
+        opacity: .5;
+        transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+      }
+      img {
+        opacity: .3;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}
+

@@ -2,6 +2,7 @@ import {menuScroll, menuShow} from "./menu";
 import {fadeIn, fadeOut} from "./fade";
 import {scrollTo} from "./scrollTo";
 import {barOne, barTwo, barThree} from "./circleProgress";
+import Masonry from "masonry-layout";
 import "../sass/index.scss";
 
 const bouncy = document.getElementsByClassName("this-bouncy")[0];
@@ -25,6 +26,7 @@ const feedbackPhone = document.getElementsByClassName("feedback")[0];
 const closeFeedback = document.getElementsByClassName("closeFeedback")[0];
 const linkNav = document.querySelectorAll("[href^=\"#nav\"]");
 const linksServices = document.getElementsByClassName("forClick");
+const grid = document.querySelector(".grid");
 
 
 window.onscroll = () => {
@@ -117,10 +119,20 @@ for (let i = 0; i < linksServices.length; i++) {
         barThree.animate(0.6);
         break;
     }
-    barOne.animate(0.8);
-    barTwo.animate(0.9);
-    barThree.animate(0.6);
-  }
+  };
+  barOne.animate(0.6);
+  barTwo.animate(0.9);
+  barThree.animate(0.35);
 }
+
+const masonry = new Masonry(grid, {
+  itemSelector: ".grid-item",
+  columnWidth: 270,
+  gutter: 8,
+  fitWidth: true
+});
+
+
+
 
 
