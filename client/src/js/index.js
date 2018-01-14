@@ -2,7 +2,9 @@ import {menuScroll, menuShow} from "./menu";
 import {fadeIn, fadeOut} from "./fade";
 import {scrollTo} from "./scrollTo";
 import {barOne, barTwo, barThree} from "./circleProgress";
+import {lineBar1, lineBar2, lineBar3} from "./lineProgress";
 import Masonry from "masonry-layout";
+import Swiper from "swiper";
 import "../sass/index.scss";
 
 const bouncy = document.getElementsByClassName("this-bouncy")[0];
@@ -27,6 +29,10 @@ const closeFeedback = document.getElementsByClassName("closeFeedback")[0];
 const linkNav = document.querySelectorAll("[href^=\"#nav\"]");
 const linksServices = document.getElementsByClassName("forClick");
 const grid = document.querySelector(".grid");
+const swiperSlides = document.getElementsByClassName("swiper-slide");
+// const btnSlides = document.querySelectorAll(".btClick");
+console.log(swiperSlides[0]);
+swiperSlides[0].ondrag(console.log("!!!"));
 
 
 window.onscroll = () => {
@@ -125,13 +131,81 @@ for (let i = 0; i < linksServices.length; i++) {
   barThree.animate(0.35);
 }
 
-const masonry = new Masonry(grid, {
+new Masonry(grid, {
   itemSelector: ".grid-item",
   columnWidth: 270,
   gutter: 8,
   fitWidth: true
 });
 
+new Swiper(".swiper-container", {
+  slidesPerView: 1,
+  spaceBetween: 300,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+// for (let i = 0; i < btnSlides.length; i++) {
+//   btnSlides[i].onclick = () => {
+//     for (let i = 0; i < swiperSlides.length; i++) {
+//     if (swiperSlides[i].className === "swiper-slide swiper-slide-active") {
+//       lineBar1.animate(1.0);
+//       lineBar2.animate(1.0);
+//       lineBar3.animate(1.0);
+//     } else if (swiperSlides[i].className === "swiper-slide") {
+//       lineBar1.animate(0);
+//       lineBar2.animate(0);
+//       lineBar3.animate(0);
+//     }
+//   }
+//   }
+// }
+
+// console.log(swiperSlides);
+// swiperSlides.onc = () => {
+//   lineBar1.animate(0);
+//   lineBar2.animate(0);
+//   lineBar3.animate(0);
+// };
+// for (let i = 0; i < swiperSlides.length; i++) {
+//   console.log(swiperSlides[i].className);
+//   if (swiperSlides[i].className === "swiper-slide swiper-slide-active") {
+//     lineBar1.animate(1.0);
+//     lineBar2.animate(1.0);
+//     lineBar3.animate(1.0);
+//   } else if(swiperSlides[i].className === "swiper-slide") {
+//     lineBar1.animate(0);
+//     lineBar2.animate(0);
+//     lineBar3.animate(0);
+//   }
+// switch (swiperSlides[i].className) {
+//   case "swiper-slide swiper-slide-active":
+//     lineBar1.animate(1.0);
+//     lineBar2.animate(1.0);
+//     lineBar3.animate(1.0);
+// }
+
+// swiperSlides[i].className = e => {
+//
+// };
+// console.log(swiperSlides[i].className)
+// buttonFirstSlider[i].onclick = e => {
+//   e.preventDefault();
+//   lineBar1.animate(1.0);
+//   lineBar2.animate(1.0);
+//   lineBar3.animate(1.0);
+// };
+//}
+
+// swiper-slide-active
 
 
 

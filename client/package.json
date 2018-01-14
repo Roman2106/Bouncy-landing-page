@@ -28,6 +28,7 @@
     "masonry-layout": "^4.2.1",
     "normalize.css": "^7.0.0",
     "postcss-loader": "^2.0.9",
-    "progressbar.js": "^1.0.1"
+    "progressbar.js": "^1.0.1",
+    "swiper": "^4.1.0"
   }
 }
