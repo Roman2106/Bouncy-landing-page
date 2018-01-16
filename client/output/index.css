@@ -1973,3 +1973,29 @@ p.read-more-text.collapsed {
     margin-top: 2.5rem;
   }
 }
+
+.team-footer {
+  max-width: 100%;
+  background-image: url(./images/bg_team_bottom.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+}
+
+.team-footer p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 4.5rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+.testimonials {
+  background-color: #F2F3F2;
+}
+
+.testimonials h3 {
+  margin-top: 0;
+  padding-top: 4.2rem;
+}

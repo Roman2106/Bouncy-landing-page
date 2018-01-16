@@ -144,3 +144,15 @@
     }
   }
 }
+
+.team-footer {
+  max-width: 100%;
+  @include background-img("../../images/bg_team_bottom.jpg", cover, center, no-repeat, padding-box);
+  p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 4.5rem 1rem;
+    text-align: center;
+    color: white;
+  }
+}
