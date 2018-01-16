@@ -1775,6 +1775,12 @@ p.read-more-text.collapsed {
   height: 440px;
 }
 
+@media (max-width: 768px) {
+  .the-team .swiper-container {
+    height: 620px;
+  }
+}
+
 .the-team .swiper-wrapper {
   position: relative;
   width: 100%;
@@ -1811,6 +1817,18 @@ p.read-more-text.collapsed {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .the-team .swiper-slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .the-team .swiper-button-prev,
 .the-team .swiper-button-next {
   position: absolute;
@@ -1823,6 +1841,7 @@ p.read-more-text.collapsed {
   z-index: 10;
   cursor: pointer;
   font-size: 2.5rem;
+  color: #323A46;
 }
 
 .the-team .swiper-button-prev {
@@ -1885,6 +1904,12 @@ p.read-more-text.collapsed {
   padding-right: 2rem;
 }
 
+@media (max-width: 960px) {
+  .the-team .slider-content-container .name-personal {
+    margin-top: 1rem;
+  }
+}
+
 .the-team .slider-content-container h4 {
   margin: 0;
   padding: 0;
@@ -1899,6 +1924,18 @@ p.read-more-text.collapsed {
   font-weight: 300;
 }
 
+@media (max-width: 960px) {
+  .the-team .slider-content-container p.italic {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .the-team .slider-content-container p.textabout {
+    display: none;
+  }
+}
+
 .the-team .slider-content-container .slider-progress {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1906,11 +1943,33 @@ p.read-more-text.collapsed {
   color: #81868F;
 }
 
-.the-team .slider-content-container #slider-progress-item1,
-.the-team .slider-content-container #slider-progress-item2,
-.the-team .slider-content-container #slider-progress-item3 {
+@media (max-width: 960px) {
+  .the-team .slider-content-container .slider-progress {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .the-team .slider-content-container .slider-progress {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.the-team .slider-content-container .line {
   margin: 0;
   height: 3px;
   position: relative;
   margin-top: 3rem;
+}
+
+@media (max-width: 960px) {
+  .the-team .slider-content-container .line:nth-child(1) {
+    margin-top: 1rem;
+  }
+
+  .the-team .slider-content-container .line:nth-child(n+2) {
+    margin-top: 2.5rem;
+  }
 }

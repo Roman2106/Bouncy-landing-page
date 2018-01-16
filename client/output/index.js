@@ -841,10 +841,6 @@ var closeFeedback = document.getElementsByClassName("closeFeedback")[0];
 var linkNav = document.querySelectorAll("[href^=\"#nav\"]");
 var linksServices = document.getElementsByClassName("forClick");
 var grid = document.querySelector(".grid");
-var swiperSlides = document.getElementsByClassName("swiper-slide");
-// const btnSlides = document.querySelectorAll(".btClick");
-console.log(swiperSlides[0]);
-swiperSlides[0].ondrag(console.log("!!!"));
 
 window.onscroll = function () {
   var scroll = document.documentElement.scrollTop;
@@ -949,10 +945,9 @@ new _masonryLayout2.default(grid, {
   fitWidth: true
 });
 
-new _swiper2.default(".swiper-container", {
+var firstSwiper = new _swiper2.default(".swiper-container", {
   slidesPerView: 1,
   spaceBetween: 300,
-  loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true
@@ -960,62 +955,30 @@ new _swiper2.default(".swiper-container", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
+  },
+  autoplay: {
+    delay: 5000
+  },
+  on: {
+    init: function init() {
+      (0, _lineProgress.startFirstLine)();
+    }
   }
 });
 
-// for (let i = 0; i < btnSlides.length; i++) {
-//   btnSlides[i].onclick = () => {
-//     for (let i = 0; i < swiperSlides.length; i++) {
-//     if (swiperSlides[i].className === "swiper-slide swiper-slide-active") {
-//       lineBar1.animate(1.0);
-//       lineBar2.animate(1.0);
-//       lineBar3.animate(1.0);
-//     } else if (swiperSlides[i].className === "swiper-slide") {
-//       lineBar1.animate(0);
-//       lineBar2.animate(0);
-//       lineBar3.animate(0);
-//     }
-//   }
-//   }
-// }
-
-// console.log(swiperSlides);
-// swiperSlides.onc = () => {
-//   lineBar1.animate(0);
-//   lineBar2.animate(0);
-//   lineBar3.animate(0);
-// };
-// for (let i = 0; i < swiperSlides.length; i++) {
-//   console.log(swiperSlides[i].className);
-//   if (swiperSlides[i].className === "swiper-slide swiper-slide-active") {
-//     lineBar1.animate(1.0);
-//     lineBar2.animate(1.0);
-//     lineBar3.animate(1.0);
-//   } else if(swiperSlides[i].className === "swiper-slide") {
-//     lineBar1.animate(0);
-//     lineBar2.animate(0);
-//     lineBar3.animate(0);
-//   }
-// switch (swiperSlides[i].className) {
-//   case "swiper-slide swiper-slide-active":
-//     lineBar1.animate(1.0);
-//     lineBar2.animate(1.0);
-//     lineBar3.animate(1.0);
-// }
-
-// swiperSlides[i].className = e => {
-//
-// };
-// console.log(swiperSlides[i].className)
-// buttonFirstSlider[i].onclick = e => {
-//   e.preventDefault();
-//   lineBar1.animate(1.0);
-//   lineBar2.animate(1.0);
-//   lineBar3.animate(1.0);
-// };
-//}
-
-// swiper-slide-active
+firstSwiper.on("slideChange", function () {
+  switch (firstSwiper.activeIndex) {
+    case 0:
+      (0, _lineProgress.startFirstLine)();
+      break;
+    case 1:
+      (0, _lineProgress.startSecondLine)();
+      break;
+    case 2:
+      (0, _lineProgress.startThirdLine)();
+      break;
+  }
+});
 
 /***/ }),
 /* 6 */
@@ -13186,7 +13149,7 @@ function scroll(...args) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.lineBar3 = exports.lineBar2 = exports.lineBar1 = undefined;
+exports.startThirdLine = exports.startSecondLine = exports.startFirstLine = undefined;
 
 var _progressbar = __webpack_require__(9);
 
@@ -13198,7 +13161,7 @@ var params = {
   strokeWidth: 4,
   easing: "easeInOut",
   duration: 1400,
-  color: "#FFEA82",
+  color: "#00BD99",
   trailColor: "#eee",
   trailWidth: 1,
   svgStyle: { width: "100%", height: "100%" },
@@ -13221,9 +13184,51 @@ var params = {
   }
 };
 
-var lineBar1 = exports.lineBar1 = new _progressbar2.default.Line("#slider-progress-item1", params);
-var lineBar2 = exports.lineBar2 = new _progressbar2.default.Line("#slider-progress-item2", params);
-var lineBar3 = exports.lineBar3 = new _progressbar2.default.Line("#slider-progress-item3", params);
+var lineBar1 = new _progressbar2.default.Line("#slider-progress-item1", params);
+var lineBar2 = new _progressbar2.default.Line("#slider-progress-item2", params);
+var lineBar3 = new _progressbar2.default.Line("#slider-progress-item3", params);
+var lineBar4 = new _progressbar2.default.Line("#slider-progress-item4", params);
+var lineBar5 = new _progressbar2.default.Line("#slider-progress-item5", params);
+var lineBar6 = new _progressbar2.default.Line("#slider-progress-item6", params);
+var lineBar7 = new _progressbar2.default.Line("#slider-progress-item7", params);
+var lineBar8 = new _progressbar2.default.Line("#slider-progress-item8", params);
+var lineBar9 = new _progressbar2.default.Line("#slider-progress-item9", params);
+
+var startFirstLine = exports.startFirstLine = function startFirstLine() {
+  lineBar1.animate(.8);
+  lineBar2.animate(.5);
+  lineBar3.animate(.9);
+  lineBar4.animate(0);
+  lineBar5.animate(0);
+  lineBar6.animate(0);
+  lineBar7.animate(0);
+  lineBar8.animate(0);
+  lineBar9.animate(0);
+};
+
+var startSecondLine = exports.startSecondLine = function startSecondLine() {
+  lineBar1.animate(0);
+  lineBar2.animate(0);
+  lineBar3.animate(0);
+  lineBar4.animate(.7);
+  lineBar5.animate(.9);
+  lineBar6.animate(.6);
+  lineBar7.animate(0);
+  lineBar8.animate(0);
+  lineBar9.animate(0);
+};
+
+var startThirdLine = exports.startThirdLine = function startThirdLine() {
+  lineBar1.animate(0);
+  lineBar2.animate(0);
+  lineBar3.animate(0);
+  lineBar4.animate(0);
+  lineBar5.animate(0);
+  lineBar6.animate(0);
+  lineBar7.animate(.8);
+  lineBar8.animate(1);
+  lineBar9.animate(.7);
+};
 
 /***/ })
 /******/ ]);
