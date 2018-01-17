@@ -1,7 +1,68 @@
 .testimonials {
   background-color: $grey-bg;
+  position: relative;
+  padding-bottom: 1rem;
   h3 {
     margin-top: 0;
     padding-top: 4.2rem;
+  }
+  img {
+    margin: 1rem 1rem 1rem 10%;
+  }
+  .swiper-container2 {
+    margin: 4rem 7%;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+  }
+  .testimonials-img-container {
+    margin: 1rem .5rem 8% 3rem;
+    flex-basis: 150px;
+    @include mq-md-and-down {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+  .testimonials-content-container {
+    margin: 1rem 1rem 8% 1rem;
+    flex-basis: 800px;
+    @include mq-md-and-down {
+      flex-basis: auto;
+    }
+    p {
+      text-align: justify;
+      margin: 1rem 10% 1rem 1rem;
+    }
+    @include mq-md-and-down {
+      p {
+        margin: 0 2rem;
+      }
+    }
+    @include mq-sm-and-down {
+      p {
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  .swiper-slide {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    @include mq-md-and-down {
+      flex-flow: column wrap;
+      align-content: center;
+      align-items: center;
+    }
+  }
+  .swiper-pagination2 {
+    bottom: 10%;
+    @include mq-md-and-down {
+      bottom: 5%;
+    }
+    @include mq-sm-and-down {
+      bottom: 1%;
+    }
   }
 }

@@ -89,3 +89,41 @@
     cursor: pointer;
   }
 }
+
+.swiper-button-prev, .swiper-button-next, .swiper-button-prev2, .swiper-button-next2 {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 0);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: $dark-font-color;
+}
+
+.swiper-button-prev {
+  left: 1rem;
+  transform: translate(-50%);
+}
+
+.swiper-button-next {
+  right: -1rem;
+  transform: translate(-50%);
+}
+
+.swiper-button-prev2,
+.swiper-button-next2 {
+  top: 44%;
+}
+
+.swiper-button-prev2 {
+  left: 1.5rem;
+  transform: translate(-44%);
+}
+
+.swiper-button-next2 {
+  right: 0;
+  transform: translate(-44%);
+}

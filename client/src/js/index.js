@@ -138,11 +138,11 @@ const firstSwiper = new Swiper(".swiper-container", {
   spaceBetween: 300,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: true
   },
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    prevEl: ".swiper-button-prev"
   },
   autoplay: {
     delay: 5000
@@ -165,5 +165,21 @@ firstSwiper.on("slideChange", () => {
     case 2:
       startThirdLine();
       break;
+  }
+});
+
+new Swiper(".swiper-container2", {
+  slidesPerView: 1,
+  spaceBetween: 300,
+  pagination: {
+    el: ".swiper-pagination2",
+    clickable: true
+  },
+  autoplay: {
+    delay: 5000
+  },
+  navigation: {
+    nextEl: ".swiper-button-next2",
+    prevEl: ".swiper-button-prev2"
   }
 });
