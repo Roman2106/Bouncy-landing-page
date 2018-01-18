@@ -762,7 +762,7 @@ var menuScroll = exports.menuScroll = function menuScroll(scroll, sfScroll, boun
   var offsetBouncy = bouncy.offsetTop;
   if (scroll > offsetBouncy || sfScroll > offsetBouncy) {
     menu.classList.add("fixed-menu");
-    menu.style.height = "72px";
+    menu.style.height = "60px";
     headerButtonToTop.setAttribute("class", "anchor-to-top");
     headerButtonToTop.style.display = "block";
   } else if (scroll + 50 > offsetBouncy || sfScroll + 50 > offsetBouncy) {
@@ -1354,6 +1354,21 @@ new _swiper2.default(".swiper-container2", {
   navigation: {
     nextEl: ".swiper-button-next2",
     prevEl: ".swiper-button-prev2"
+  }
+});
+
+new _swiper2.default(".swiper-container3", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 300,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination3",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next3",
+    prevEl: ".swiper-button-prev3"
   }
 });
 

@@ -183,3 +183,18 @@ new Swiper(".swiper-container2", {
     prevEl: ".swiper-button-prev2"
   }
 });
+
+new Swiper(".swiper-container3", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 300,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination3",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next3",
+    prevEl: ".swiper-button-prev3"
+  }
+});

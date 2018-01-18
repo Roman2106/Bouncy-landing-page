@@ -815,7 +815,7 @@ header:before {
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 3%;
+  padding-top: 1.6%;
   z-index: 2;
 }
 
@@ -2117,4 +2117,61 @@ p.read-more-text.collapsed {
   .testimonials .swiper-pagination2 {
     bottom: 1%;
   }
+}
+
+.news h3 {
+  margin-top: 3rem;
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
+}
+
+.news p {
+  margin-top: auto;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.news .swiper-container3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.news .swiper-wrapper {
+  position: relative;
+  height: 400px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.news .swiper-slide {
+  position: relative;
+  text-align: center;
+}
+
+.news .swiper-pagination3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  position: absolute;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+  top: 50%;
+  z-index: 1;
+}
+
+.news .swiper-pagination-bullet {
+  margin: 5px 0;
 }
