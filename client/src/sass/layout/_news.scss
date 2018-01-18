@@ -11,6 +11,7 @@
     margin-left: 0;
     padding-left: 0;
   }
+  background-color: black;
   .swiper-container3 {
     position: relative;
     overflow: hidden;
@@ -32,7 +33,6 @@
     transition: 300ms;
     transform: translate3d(0, -50%, 0);
     top: 50%;
-    //width: 100%;
     z-index: 1;
   }
 

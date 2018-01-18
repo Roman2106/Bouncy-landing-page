@@ -2119,6 +2119,10 @@ p.read-more-text.collapsed {
   }
 }
 
+.news {
+  background-color: black;
+}
+
 .news h3 {
   margin-top: 3rem;
   margin-left: 0;
