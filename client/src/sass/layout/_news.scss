@@ -1,68 +1,71 @@
 .news {
+  @include background-img("../../images/bg_blog_1.jpg", cover, center, no-repeat, padding-box);
   h3 {
-    margin-top: 3rem;
-    margin-left: 0;
+    margin-top: 0;
+    margin-left: 7%;
+    padding-top: 4.2rem;
     padding-left: 0;
     text-align: left;
+    color: white;
   }
   p {
     margin-top: auto;
     text-align: left;
-    margin-left: 0;
+    margin-left: 7%;
     padding-left: 0;
+    color: white;
   }
-  background-color: black;
   .swiper-container3 {
+    margin: 0 7% 0 12%;
     position: relative;
     overflow: hidden;
-  }
-  .swiper-wrapper {
-    position: relative;
-    height: 400px;
-    flex-direction: column;
-  }
-  .swiper-slide {
-    position: relative;
-    text-align: center;
-  }
-  .swiper-pagination3 {
-    display: flex;
-    flex-flow: column nowrap;
-    position: absolute;
-    align-items: flex-end;
-    transition: 300ms;
-    transform: translate3d(0, -50%, 0);
-    top: 50%;
-    z-index: 1;
-  }
-
-  .swiper-pagination-bullet {
-    margin: 5px 0;
+    height: 450px;
+    .swiper-wrapper {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition-property: transform;
+    }
+    .swiper-slide {
+      align-items: flex-start;
+      flex-flow: column nowrap;
+      align-content: center;
+      p {
+        &:nth-child(1) {
+          margin: 5% 0 0 0;
+        }
+        margin: 0;
+        width: 100%;
+        color: white;
+      }
+    }
+    .swiper-pagination3 {
+      position: absolute;
+      text-align: center;
+      transition: 300ms;
+      transform: translate3d(0, 0, 0);
+    }
+    .swiper-pagination-bullets {
+      bottom: 50%;
+      right: 1%;
+      width: 1%;
+      z-index: 30;
+    }
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      border: 1px solid white;
+      background-color: black;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: white;
+    }
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 12px 0;
+      display: block;
+    }
   }
 }
-
-//.swiper-pagination, .swiper-pagination2 {
-//  position: absolute;
-//  text-align: center;
-//  transition: 300ms;
-//  transform: translate3d(0, 0, 0);
-//  z-index: 1;
-//}
-//
-//.swiper-pagination-bullets {
-//  bottom: 0;
-//  left: 0;
-//  width: 100%;
-//}
-//
-//.swiper-pagination-bullet {
-//  width: 10px;
-//  height: 10px;
-//  display: inline-block;
-//  border-radius: 100%;
-//  background: white;
-//  border: 1px solid $company-color;
-//  &:nth-child(n+2) {
-//    margin-left: 8px;
-//  }
-//}
