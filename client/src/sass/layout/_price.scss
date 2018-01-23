@@ -1,0 +1,101 @@
+.price {
+  padding-left: 17%;
+  padding-right: 17%;
+  padding-bottom: 4.5rem;
+  background-color: $grey-bg;
+  h3 {
+    padding-top: 4.2rem;
+    margin-top: 0;
+  }
+  .price-row {
+    margin-top: 3rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 230px));
+    grid-auto-rows: max(300px);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    @include mq-md-and-down {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 230px));
+    }
+    @include mq-lg-and-down {
+      grid-column-gap: 20px;
+      grid-row-gap: 15px;
+    }
+  }
+  figure {
+    border: 1px solid $company-color;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+    max-width: 230px;
+    max-height: 300px;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    .goliath-content {
+      position: relative;
+      min-height: 100%;
+      min-width: 100%;
+      transition: transform 0.35s;
+      z-index: 1;
+      &:hover {
+        transform: translate3d(0, -80px, 0);
+      }
+    }
+    p:first-child {
+      margin: 0;
+      padding: 1.2rem 0;
+      font-family: $main-font;
+      font-weight: bold;
+      color: white;
+      letter-spacing: .1rem;
+      font-size: 1.2rem;
+      background-color: $company-color;
+    }
+    p:nth-child(2) {
+      display: block;
+      position: absolute;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -57%);
+      backface-visibility: hidden;
+      transition: all 0.35s;
+      span:nth-child(1) {
+        font-family: $headers-font;
+        font-size: 2.8rem;
+        font-weight: bold;
+      }
+      span:last-child {
+        font-family: $headers-font;
+        font-size: 1.2rem;
+      }
+    }
+    figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      h4 {
+        position: absolute;
+        bottom: -120px;
+        left: 0;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: translate3d(0, 50px, 0);
+        padding: 20px;
+        margin: 0;
+        background-color: $company-color;
+        color: white;
+        font-family: $headers-font;
+        font-weight: lighter;
+        font-size: 1rem;
+      }
+    }
+    &:hover h4 {
+      transform: translate3d(0, -120px, 0);
+    }
+  }
+}

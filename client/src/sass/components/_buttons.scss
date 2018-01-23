@@ -127,3 +127,15 @@
   right: 0;
   transform: translate(-44%);
 }
+
+.subscribe-form-button {
+  @include links(inline-block, none, white, null, $headers-font, lighter);
+  background-color: $company-color;
+  padding: 10px 2rem;
+  transition: all .35s;
+  margin-left: 1%;
+  &:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+}

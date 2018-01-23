@@ -1,0 +1,47 @@
+.subscribe {
+  h3 {
+    margin-top: 0;
+    padding-top: 4.2rem;
+    color: white;
+    z-index: 1;
+  }
+  p {
+    color: $white-font-color;
+    z-index: 1;
+  }
+  .parallax {
+    @include background-img("../../images/parallax_bg.jpg", cover, center, no-repeat, padding-box);
+    background-attachment: fixed;
+    height: 380px;
+    position: relative;
+    .subscribe-form {
+      margin-top: 4%;
+      padding-left: 2%;
+      padding-right: 2%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+    input {
+      background-color: transparent;
+      border: 1px solid white;
+      padding: 9px;
+      font-family: $headers-font;
+      color: white;
+      width: 400px;
+      &::-webkit-input-placeholder {
+        color: white;
+      }
+      &::-moz-placeholder {
+        color: white;
+      }
+      &:-moz-placeholder {
+        color: white;
+      }
+      &:-ms-input-placeholder {
+        color: white;
+      }
+      outline: none;
+    }
+  }
+}
