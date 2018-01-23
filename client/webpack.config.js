@@ -1,9 +1,10 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-  context: path.resolve(__dirname, 'src'),
+  context: path.resolve(__dirname, "src"),
   entry: "./js/index.js",
   output: {
     path: path.resolve(__dirname, "./output"),
@@ -67,6 +68,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("index.css")
+    new ExtractTextPlugin("index.css"),
+    new UglifyJsPlugin(
+      {
+        test: /\.js($|\?)/i
+      }
+    )
   ]
 };
