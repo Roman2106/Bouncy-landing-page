@@ -1,0 +1,50 @@
+.contact-form {
+  margin: 4.2rem 7%;
+  padding: 2%;
+  input {
+    padding: 9px;
+    border: 1px solid $light-grey-font-color;
+    font-family: $main-font;
+    font-weight: lighter;
+    outline: none;
+    margin: 0;
+    &::-webkit-input-placeholder {
+      color: $light-grey-font-color;
+      font-family: $main-font;
+      font-weight: lighter;
+    }
+    &::-moz-placeholder {
+      color: $light-grey-font-color;
+      font-family: $main-font;
+      font-weight: lighter;
+    }
+    &:-moz-placeholder {
+      color: $light-grey-font-color;
+      font-family: $main-font;
+      font-weight: lighter;
+    }
+    &:-ms-input-placeholder {
+      color: $light-grey-font-color;
+      font-family: $main-font;
+      font-weight: lighter;
+    }
+  }
+  textarea {
+    margin: 0;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    border: 1px solid $light-grey-font-color;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 20px;
+    @include mq-md-and-down {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

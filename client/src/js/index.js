@@ -5,6 +5,7 @@ import {barOne, barTwo, barThree} from "./circleProgress";
 import {startFirstLine, startSecondLine, startThirdLine} from "./lineProgress";
 import Masonry from "masonry-layout";
 import Swiper from "swiper";
+import {initMap} from "./ymap";
 import "../sass/index.scss";
 
 const bouncy = document.getElementsByClassName("this-bouncy")[0];
@@ -29,6 +30,14 @@ const closeFeedback = document.getElementsByClassName("closeFeedback")[0];
 const linkNav = document.querySelectorAll("[href^=\"#nav\"]");
 const linksServices = document.getElementsByClassName("forClick");
 const grid = document.querySelector(".grid");
+const subscribeFormButton = document.querySelector(".subscribe-form-button");
+const yandexMapOverlay = document.querySelector(".yandexMap-overlay");
+const yMamp = document.getElementById("yandexMap");
+const wrapper = document.querySelector(".wrapper");
+
+yandexMapOverlay.ondblclick = () => {
+  fadeOut(yandexMapOverlay);
+};
 
 window.onscroll = () => {
   let scroll = document.documentElement.scrollTop;
@@ -44,6 +53,10 @@ window.onkeydown = e => {
       fadeOut(creativeIdeasTwo);
       fadeOut(creativeIdeasThree);
   }
+};
+
+window.onload = () => {
+  initMap();
 };
 
 navButton.onclick = e => {
@@ -115,7 +128,7 @@ for (let i = 0; i < linksServices.length; i++) {
         barThree.animate(0.85);
         break;
       case "forth-services-link forClick":
-        barOne.animate(1);
+        barOne.animate(0.99);
         barTwo.animate(0.9);
         barThree.animate(0.6);
         break;
@@ -198,3 +211,7 @@ new Swiper(".swiper-container3", {
     prevEl: ".swiper-button-prev3"
   }
 });
+
+subscribeFormButton.onclick = e => {
+  e.preventDefault();
+};

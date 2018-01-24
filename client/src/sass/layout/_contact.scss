@@ -1,0 +1,36 @@
+.contact-us {
+  background-color: $grey-bg;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 4.2rem;
+  h3 {
+    padding-top: 4.2rem;
+    margin-top: 0;
+  }
+  .contact-row {
+    margin-top: 3rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 280px));
+    grid-gap: 20px;
+    @include mq-md-and-down {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
+    }
+    div {
+      background-color: white;
+      h4 {
+        text-align: center;
+        font-family: $main-font;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+      }
+      p {
+        text-align: center;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
