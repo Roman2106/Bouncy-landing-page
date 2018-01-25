@@ -32,10 +32,11 @@ const linksServices = document.getElementsByClassName("forClick");
 const grid = document.querySelector(".grid");
 const subscribeFormButton = document.querySelector(".subscribe-form-button");
 const yandexMapOverlay = document.querySelector(".yandexMap-overlay");
-const yMamp = document.getElementById("yandexMap");
 const wrapper = document.querySelector(".wrapper");
+const arrSocIcons = document.getElementsByClassName("socIcons");
+const contactFormButton = document.querySelector(".contact-form-button");
 
-yandexMapOverlay.ondblclick = () => {
+yandexMapOverlay.onclick = () => {
   fadeOut(yandexMapOverlay);
 };
 
@@ -213,5 +214,15 @@ new Swiper(".swiper-container3", {
 });
 
 subscribeFormButton.onclick = e => {
+  e.preventDefault();
+};
+
+for (let i = 0; i < arrSocIcons.length; i++) {
+  arrSocIcons[i].onclick = e => {
+    e.preventDefault();
+  }
+}
+
+contactFormButton.onclick = e => {
   e.preventDefault();
 };

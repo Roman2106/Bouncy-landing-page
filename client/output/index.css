@@ -850,7 +850,7 @@ header:before {
   left: 0;
   right: 0;
   padding-top: 1.6%;
-  z-index: 2;
+  z-index: 10000;
 }
 
 @media (min-width: 1360px) {
@@ -2656,4 +2656,70 @@ p.read-more-text.collapsed {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+footer {
+  background-color: #F2F3F2;
+}
+
+footer h2 {
+  text-transform: uppercase;
+  font-family: "BigJohn", Big John;
+  color: #313945;
+  text-align: center;
+  padding: 0;
+  margin-left: 0;
+  margin-top: 0;
+  padding-top: 3.2rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 1.3rem;
+  padding-bottom: 3.2rem;
+}
+
+footer li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 7px;
+}
+
+footer a {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50px;
+}
+
+footer a:hover,
+footer .responsive-nav .nav-li a:focus,
+.responsive-nav .nav-li footer a:focus {
+  cursor: pointer;
+}
+
+footer .socIcons1 {
+  background-image: url(./images/facebook.jpg);
+}
+
+footer .socIcons2 {
+  background-image: url(./images/twiter.jpg);
+}
+
+footer .socIcons3 {
+  background-image: url(./images/linkedin.jpg);
+}
+
+footer .socIcons4 {
+  background-image: url(./images/instagram.jpg);
+}
+
+footer .socIcons5 {
+  background-image: url(./images/vimeo.jpg);
 }

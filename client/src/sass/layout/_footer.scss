@@ -1,0 +1,52 @@
+footer {
+  background-color: $grey-bg;
+  h2 {
+    text-transform: uppercase;
+    font-family: $logo-font;
+    color: #313945;
+    text-align: center;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 3.2rem;
+  }
+  p {
+    text-align: center;
+  }
+  ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.3rem;
+    padding-bottom: 3.2rem;
+  }
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 7px;
+  }
+  a {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .socIcons1 {
+    background-image: url("../../images/facebook.jpg");
+  }
+  .socIcons2 {
+    background-image: url("../../images/twiter.jpg");
+  }
+  .socIcons3 {
+    background-image: url("../../images/linkedin.jpg");
+  }
+  .socIcons4 {
+    background-image: url("../../images/instagram.jpg");
+  }
+  .socIcons5 {
+    background-image: url("../../images/vimeo.jpg");
+  }
+}
