@@ -11,6 +11,10 @@
   display: block;
 }
 
+.wrapper a {
+  color: white;
+}
+
 .wrapper h4 {
   @include all-h($main-font, null, null, $dark-font-color, null, 400, lowecase);
   margin-top: 2.3rem;

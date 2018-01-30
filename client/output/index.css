@@ -500,6 +500,10 @@ template {
   display: block;
 }
 
+.wrapper a {
+  color: white;
+}
+
 .wrapper h4 {
   font-family: "Open Sans", sans-serif;
   color: #323A46;
@@ -735,7 +739,7 @@ header:before {
   cursor: pointer;
 }
 
-.featured-projects-submit-now {
+a.featured-projects-submit-now {
   display: inline-block;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
@@ -745,11 +749,11 @@ header:before {
   padding: .3rem 1.5rem;
 }
 
-.featured-projects-submit-now:visited {
+a.featured-projects-submit-now:visited {
   color: black;
 }
 
-.featured-projects-submit-now:hover,
+a.featured-projects-submit-now:hover,
 .responsive-nav .nav-li a.featured-projects-submit-now:focus {
   cursor: pointer;
 }
@@ -1020,6 +1024,10 @@ header:before {
   transition-property: margin-top;
   -webkit-transition-duration: .7s;
           transition-duration: .7s;
+}
+
+a.this-bouncy-readMore {
+  color: black;
 }
 
 p.read-more-text.collapsed {
@@ -2442,6 +2450,11 @@ p.read-more-text.collapsed {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: lighter;
   font-size: 1rem;
+}
+
+.price figure:hover div.goliath-content {
+  -webkit-transform: translate3d(0, -80px, 0);
+          transform: translate3d(0, -80px, 0);
 }
 
 .price figure:hover h4 {

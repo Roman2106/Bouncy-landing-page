@@ -80,7 +80,7 @@
   }
 }
 
-.featured-projects-submit-now {
+a.featured-projects-submit-now {
   @include links(inline-block, none, black, null, $main-font, lighter);
   border: 1px solid black;
   margin-top: 1rem;
